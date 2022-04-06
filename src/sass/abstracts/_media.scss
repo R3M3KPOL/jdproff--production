@@ -1,0 +1,23 @@
+@use '../utils'as *;
+
+
+// $breakpoints: (
+//     'medium': (min-width: em(640)),
+//     'large': (min-width: em(1040)),
+//     'huge': (min-width: em(1200)),
+// );
+
+$breakpoints: (
+  'sm': em(576),//576px,
+  'md': em(768),//768px,
+  'lg': em(992),//992px,
+  'xl': em(1200),//1200px,
+  'xxl': em(1400),//1400px
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+    
+}

@@ -1,0 +1,7 @@
+@use '../utils/functions'as *;
+
+.main__video {
+    height: 100vh;
+    width: clamp(em(300), 80vw, em(1400));
+    object-fit: cover;
+}

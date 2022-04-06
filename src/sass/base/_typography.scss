@@ -1,0 +1,24 @@
+@use 'font-face'as *;
+@use '../utils/functions'as *;
+
+body {
+    min-height: 200vh;
+    max-width: em(1400);
+    margin: 0 auto;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: $font-family-title;
+}
+
+p,
+a,
+li,
+span,
+label,
+input {
+    font-family: $font-family-text;
+}

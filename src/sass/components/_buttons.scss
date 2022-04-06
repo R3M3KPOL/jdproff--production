@@ -1,0 +1,79 @@
+@use '../utils' as *;
+@use '../abstracts' as *;
+
+.hamburger {
+    position: absolute;
+    top: rem(10);
+    right: rem(10);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+
+     @include breakpoint(md){ 
+           display: none;
+       }
+
+
+    &__btn {
+        width: rem(50);
+        height: rem(50);
+        cursor: pointer;
+    }
+
+    &__line {
+        fill: none;
+        stroke: black;
+        stroke-width: 6;
+        pointer-events: all;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__line1 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+
+        // &:hover {
+        //     stroke-dasharray: 40 207;
+        // }
+    }
+
+    &__line1.opened {
+        stroke: #047276;
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+    }
+
+
+    &__line2 {
+        stroke-dasharray: 50 60;
+        stroke-width: 6;
+    }
+
+    &__line2.opened {
+        stroke: #047276;
+        stroke-dasharray: 1 60;
+        stroke-dashoffset: -30;
+        stroke-width: 6;
+    }
+
+
+    &__line3 {
+        stroke-dasharray: 40 207;
+        stroke-width: 6;
+
+        // &:hover {
+        //     stroke-dasharray: 60 207;
+        // }
+    }
+
+    &__line3.opened {
+        stroke: #047276;
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+    }
+
+}

@@ -1,0 +1,183 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 200vh;
+  max-width: 87.5em;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Roboto, sans-serif;
+}
+
+p,
+a,
+li,
+span,
+label,
+input {
+  font-family: Archivo-Black, sans-serif;
+}
+
+.hamburger {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+@media (min-width: 48em) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger__btn {
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+}
+.hamburger__line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  pointer-events: all;
+  -webkit-transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hamburger__line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.hamburger__line1.opened {
+  stroke: #047276;
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.hamburger__line2 {
+  stroke-dasharray: 50 60;
+  stroke-width: 6;
+}
+.hamburger__line2.opened {
+  stroke: #047276;
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.hamburger__line3 {
+  stroke-dasharray: 40 207;
+  stroke-width: 6;
+}
+.hamburger__line3.opened {
+  stroke: #047276;
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 71, 89, 0.4);
+          box-shadow: 0 3px 20px rgba(0, 71, 89, 0.4);
+}
+@media (min-width: 48em) {
+  .header {
+    max-height: 8vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.header__navigation {
+  width: 100%;
+}
+.header__img {
+  height: 3.125rem;
+  width: 3.125rem;
+}
+.header__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: tomato;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+@media (min-width: 48em) {
+  .header__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.header__items.open {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.header__list {
+  padding: 2.5rem;
+}
+.header__logo--mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__video {
+  height: 100vh;
+  width: clamp(18.75em, 80vw, 87.5em);
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
