@@ -9,13 +9,21 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 3px 20px rgb(0 71 89 / 40%);
-        @include breakpoint(md){
+    background-color: $bgc-header;
+    box-shadow: 0 3px 20px $bgc-shadow;
+
+        @include breakpoint-min(md){
             max-height: 8vh;
            flex-direction: row;
         }
-
+    &__title{
+    font-size: rem(40);
+    width: clamp(5em,5vw,15em);
+     @include breakpoint-max(md){
+           display: none;
+        }
+    }
+       
     &__navigation {
         width: 100%;
     }
@@ -23,6 +31,10 @@
     &__img {
         height: rem(50);
         width: rem(50);
+
+        @include breakpoint-min(md){
+            display: none;
+        }
     }
 
     &__items {
@@ -30,13 +42,13 @@
         flex-direction: column;
         align-items: center;
         height: 100vh;
-        background-color: tomato;
         transform: translateX(-100%);
         transition: transform .5s ease-in-out;
 
-         @include breakpoint(md){
+         @include breakpoint-min(md){
            flex-direction: row;
            justify-content: flex-end;
+
            height: 100%;
            transform: translateX(0);
         }
@@ -48,13 +60,31 @@
     }
 
     &__list {
-        padding: rem(40);
+        padding: rem(10) rem(10);
+        margin: rem(10) rem(15);
+        text-align: center;
+        cursor: pointer;
+        
     }
 
-    &__logo--mobile {
+    &__item{
+    color: $bgc-dark;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out;
+    }
+    &__list:hover>&__item{
+        color: $color-hover-social;
+    }
+    &__logo{
         display: flex;
         margin: rem(10);
         align-items: center;
     }
-
+    &__dropdown{
+        border: 1px solid black;
+        padding: rem(5) rem(10);
+    }
+    &__dp_item{
+        text-align: start;
+    }
 }

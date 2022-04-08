@@ -10,7 +10,7 @@
     cursor: pointer;
     z-index: 20;
 
-     @include breakpoint(md){ 
+     @include breakpoint-min(md){ 
            display: none;
        }
 

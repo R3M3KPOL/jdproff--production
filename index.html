@@ -24,14 +24,10 @@ podejmujemy się długoterminowych prac wyjazdowych.">
 <body>
     <header class="header">
 
-        <div class="header__logo--mobile">
+        <div class="header__logo">
             <img class="header__img" src="./src/img/jdProffLogo.svg" alt="logo jdproff">
             <h1 class="header__title">JD PROFF</h1>
         </div>
-      
-        <!-- <div class="header__logo--mobile">
-            <img src="./src/img/backgroundmini.svg" alt="logo jdproff">
-        </div> -->
         <nav class="header__navigation">
             <button class="hamburger">
                 <svg class="hamburger__btn" viewBox="0 0 100 100">
@@ -43,19 +39,27 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                 </svg>
             </button>
             <ul class="header__items">
+                <li class="header__list"><a href="#" class="header__item header__item--border">Cennik</a>
+                </li>
                 <li class="header__list"><a href="#top" class="header__item header__item--border">Om oss</a></li>
                 <li class="header__list"><a href="#middle" class="header__item header__item--border">Tjenester</a>
                 </li>
                 <li class="header__list"><a href="#bottom" class="header__item header__item--border">Prosjekter</a>
+                    <ul class="header__dropdown">
+                        <li class="header__dp_item"><a href="#" class="header__item">pokoje</a></li>
+                        <li class="header__dp_item"><a href="#" class="header__item">patio</a></li>
+                        <li class="header__dp_item"><a href="#" class="header__item">kuchnia</a></li>
+                        <li class="header__dp_item"><a href="#" class="header__item">Wszystkie zdjęcia</a></li>
+                    </ul>
                 </li>
-                <li class="header__list header__list--border"><a href="#contact" class="header__item">Kontakt</a>
+                <li class="header__list item--border"><a href="#contact" class="header__item ">Kontakt</a>
                 </li>
             </ul>
         </nav>
     </header>
 
 
-  <!-- <main class="main">
+    <!-- <main class="main">
         <div class="main__container">
             <video class="main__video" playsinline="" autoplay="" loop="" muted="">
                 <source src=".\src\video\abc.mp4" type="video/mp4" alt="Analyse av leilighet plantegning">

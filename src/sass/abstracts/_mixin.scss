@@ -1,0 +1,47 @@
+@use 'variables' as *;
+@use '../utils/' as *;
+
+//hover effect for buttons
+.item--border::after,.item--border::before{
+    content: '';
+    display: block;
+    position: relative;
+    padding: rem(12);//12px;
+    width: em(88);//5.5em;
+    left: 0;
+    border: rem(2) solid $bgc-dark;
+    transition: transform .2s;
+    z-index: -1;
+}
+.item--border::before{
+    top: rem(22);//22px;
+}
+.item--border::after{
+    bottom: rem(24);//24px;
+}
+// .item--border:hover::after {
+//     border:rem(2) solid $bgc-box;
+//     transform: translate(rem(2.5), rem(2.5));
+// }
+// .item--border:hover::before {
+//     border:rem(2) solid $bgc-box;
+//     transform: translate(rem(-2.5), rem(-2.5));
+// }
+.item--border::after {
+    border:rem(2) solid $color-hover-social;
+    transform: translate(rem(2.5), rem(2.5));
+}
+.item--border::before {
+    border:rem(2) solid $color-hover-social;
+    transform: translate(rem(-2.5), rem(-2.5));
+}
+
+
+.item--border:hover::after {
+    border:rem(2) solid $bgc-box;
+    transform: translate(rem(0), rem(0));
+}
+.item--border:hover::before {
+    border:rem(2) solid $bgc-box;
+    transform: translate(rem(0), rem(0));
+}
