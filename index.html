@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <!-- <link rel="short icon" type="image/png" href="img/photo/favicon/favicon-32x32.png">
     <link rel="short icon" type="image/png" href="img/photo/favicon/favicon-16x16.png"> -->
+
     <link rel="stylesheet" href="./src/css/style.css">
     <title>JD PROFF</title>
     <meta name="description" content="oferujemy usługi z zakresu prac budowlanych .Zajmujemy się wykonywaniem prac na terenie Oslo i okolic.
@@ -39,20 +40,27 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                 </svg>
             </button>
             <ul class="header__items">
-                <li class="header__list"><a href="#" class="header__item header__item--border">Cennik</a>
+                <li class="header__list"><a href="#" class="header__item">Cennik</a>
                 </li>
-                <li class="header__list"><a href="#top" class="header__item header__item--border">Om oss</a></li>
-                <li class="header__list"><a href="#middle" class="header__item header__item--border">Tjenester</a>
+                <li class="header__list"><a href="#top" class="header__item">Om oss</a></li>
+                <li class="header__list"><a href="#middle" class="header__item">Tjenester</a>
                 </li>
-                <li class="header__list"><a href="#bottom" class="header__item header__item--border">Prosjekter</a>
+                <li class="header__list header__list--dropdown"><a href="#bottom"
+                        class="header__item header__item--arrow">Prosjekter
+                        <span class="header__arrow"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span>
+                    </a>
+
                     <ul class="header__dropdown">
-                        <li class="header__dp_item"><a href="#" class="header__item">pokoje</a></li>
-                        <li class="header__dp_item"><a href="#" class="header__item">patio</a></li>
-                        <li class="header__dp_item"><a href="#" class="header__item">kuchnia</a></li>
-                        <li class="header__dp_item"><a href="#" class="header__item">Wszystkie zdjęcia</a></li>
+                        <li class="header__dp_item"><a href="#" class="header__item header__item--margin">pokoje</a>
+                        </li>
+                        <li class="header__dp_item"><a href="#" class="header__item header__item--margin">patio</a></li>
+                        <li class="header__dp_item"><a href="#" class="header__item header__item--margin">kuchnia</a>
+                        </li>
+                        <li class="header__dp_item"><a href="#" class="header__item header__item--margin">Wszystkie
+                                zdjęcia</a></li>
                     </ul>
                 </li>
-                <li class="header__list item--border"><a href="#contact" class="header__item ">Kontakt</a>
+                <li class="header__list"><a href="#contact" class="header__item ">Kontakt</a>
                 </li>
             </ul>
         </nav>

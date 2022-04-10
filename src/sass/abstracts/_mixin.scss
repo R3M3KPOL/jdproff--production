@@ -7,17 +7,18 @@
     display: block;
     position: relative;
     padding: rem(12);//12px;
-    width: em(88);//5.5em;
+    // width: em(88);//5.5em;
+    width: 100%;
     left: 0;
     border: rem(2) solid $bgc-dark;
     transition: transform .2s;
     z-index: -1;
 }
 .item--border::before{
-    top: rem(22);//22px;
+    top: rem(26);//22px;
 }
 .item--border::after{
-    bottom: rem(24);//24px;
+    bottom: rem(25);//24px;
 }
 // .item--border:hover::after {
 //     border:rem(2) solid $bgc-box;

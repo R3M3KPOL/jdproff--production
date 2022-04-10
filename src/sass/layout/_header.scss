@@ -4,13 +4,17 @@
 
 .header {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
+    margin: 0 auto;
     background-color: $bgc-header;
     box-shadow: 0 3px 20px $bgc-shadow;
+   
 
         @include breakpoint-min(md){
             max-height: 8vh;
@@ -26,6 +30,8 @@
        
     &__navigation {
         width: 100%;
+        max-width: em(1400);
+        
     }
 
     &__img {
@@ -44,7 +50,7 @@
         height: 100vh;
         transform: translateX(-100%);
         transition: transform .5s ease-in-out;
-
+    
          @include breakpoint-min(md){
            flex-direction: row;
            justify-content: flex-end;
@@ -64,27 +70,74 @@
         margin: rem(10) rem(15);
         text-align: center;
         cursor: pointer;
-        
+            &:nth-child(5){
+            border: rem(1) solid $bgc-button;
+            border-radius: rem(8);
+            transition: border-radius .2s ease-in-out;
+                &:hover{
+            border-radius: rem(20);
+                }
+            }
+
     }
 
     &__item{
-    color: $bgc-dark;
-    text-transform: uppercase;
-    transition: color .2s ease-in-out;
+        margin: rem(8);
+        padding:rem(8) ;
+        color: $color-black;
+        text-transform: uppercase;
+        transition: color .2s ease-in-out;
+        &--arrow{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        &--margin{
+            margin-left: 0;
+            padding-left: rem(5); 
+        }
     }
     &__list:hover>&__item{
-        color: $color-hover-social;
+        color: $color-semiBlack;
+        
+        
     }
+   
     &__logo{
         display: flex;
         margin: rem(10);
         align-items: center;
     }
     &__dropdown{
-        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: static;
+        margin-left: rem(80);
         padding: rem(5) rem(10);
+        background-color:$bgc-header;
+        box-shadow:-2px 2px 0px $color-box-shadow;
+        border-radius:0 0 rem(10) rem(10);
+        cursor: pointer;
+
+        @include breakpoint-min(md){
+          position: absolute;
+          margin-left: auto;
+        }
     }
     &__dp_item{
-        text-align: start;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        border-bottom: 1px solid $border;
+        &:nth-last-child(1){
+        border: none;
+        }
+        &:hover>.header__item{
+        color: $color-semiBlack;
+        } 
+       
     }
+    
+
 }

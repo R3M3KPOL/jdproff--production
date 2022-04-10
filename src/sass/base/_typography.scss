@@ -7,7 +7,6 @@ body {
     margin: 0 auto;
 }
 
-
 h1,
 h2,
 h3 {
@@ -21,4 +20,14 @@ span,
 label,
 input {
     font-family: $font-family-text;
+}
+
+
+
+a{font-size: rem(16);
+    font-weight: bold;
+}
+
+.header__item--margin{
+    font-size: rem(12);
 }
