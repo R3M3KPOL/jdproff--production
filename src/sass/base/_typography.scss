@@ -1,11 +1,6 @@
 @use 'font-face'as *;
 @use '../utils/functions'as *;
 
-body {
-    min-height: 200vh;
-    max-width: em(1400);
-    margin: 0 auto;
-}
 
 h1,
 h2,
@@ -24,10 +19,15 @@ input {
 
 
 
-a{font-size: rem(16);
+a{  
+    font-size: clamp(rem(15), -0.875rem + 2.0vw, rem(17));
     font-weight: bold;
 }
 
 .header__item--margin{
-    font-size: rem(12);
+    font-size: rem(14);
+}
+
+.fa-arrow-down{
+    font-size: rem(15);
 }

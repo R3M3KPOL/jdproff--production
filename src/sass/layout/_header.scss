@@ -2,61 +2,113 @@
 @use '../utils/functions'as *;
 @use '../abstracts' as *;
 
+//MD - media query - 768px.
+
 .header {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    margin: 0 auto;
-    background-color: $bgc-header;
+    background-color: $color-white;
     box-shadow: 0 3px 20px $bgc-shadow;
-   
-
-        @include breakpoint-min(md){
-            max-height: 8vh;
+    border-bottom: 1px solid $border-line-bottom;
+    z-index: 99;
+    @include breakpoint-min(md){
            flex-direction: row;
         }
-    &__title{
-    font-size: rem(40);
-    width: clamp(5em,5vw,15em);
-     @include breakpoint-max(md){
-           display: none;
+    @include breakpoint-min(lg){
+        flex-wrap: nowrap;
         }
-    }
-       
-    &__navigation {
+    &__blurBg{
+        position: fixed;
+        background-color: hsla(0,0%,7%,.36);;
+        height: 100%;
         width: 100%;
-        max-width: em(1400);
-        
-    }
-
-    &__img {
-        height: rem(50);
-        width: rem(50);
-
+        backdrop-filter: blur(3px);
+        opacity: 0;
+        visibility: hidden;
+        transition:opacity .3s ease-in-out, visibility .3s ease-in-out;
+        z-index: 1;
+        &.--open{
+            opacity: 1;
+            visibility: inherit;
+        }
         @include breakpoint-min(md){
             display: none;
         }
     }
+    &__arrow{
+        transform: rotate(90deg);
+        margin-left: rem(5);
+        @include breakpoint-min(md){
+            &{
+            transform: rotate(0deg);
+            }
+        }
+    }
+    &__title{
+    white-space: nowrap;
+    cursor: pointer;
+    &>a{
+        color: $color-black;
+        font-size: clamp(rem(18), 3.4vw, rem(38));
+    }
 
+     @include breakpoint-max(md){
+           display: none;
+        }
+    }
+     &__logo{
+        display: flex;
+        align-items: center;
+        padding: rem(10);
+    }
+    &__img {
+        width: em(65);
+        @include breakpoint-min(md){
+            display: none;
+        }
+    }
+    
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        max-width: em(2560);
+        padding:$padding;
+        @include breakpoint-min(lg){
+           flex-direction: row;
+           justify-content: space-between;
+        }
+    }
     &__items {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: rem(20);
+        position: absolute;
+        inset: rem(78) 0 0 0;
+        background-color: $color-white;
         height: 100vh;
         transform: translateX(-100%);
         transition: transform .5s ease-in-out;
-    
          @include breakpoint-min(md){
            flex-direction: row;
            justify-content: flex-end;
-
-           height: 100%;
+           inset: 0 0 0 0;
+           position: static;
+           height: auto;
            transform: translateX(0);
+        }
+        @include breakpoint-between(md, lg){
+            gap: 0;
         }
     }
 
@@ -64,64 +116,94 @@
         transition: transform .5s ease-in-out;
         transform: translateX(0);
     }
-
     &__list {
         padding: rem(10) rem(10);
         margin: rem(10) rem(15);
         text-align: center;
+        white-space: nowrap;
         cursor: pointer;
-            &:nth-child(5){
+         &:nth-child(5){
             border: rem(1) solid $bgc-button;
             border-radius: rem(8);
             transition: border-radius .2s ease-in-out;
-                &:hover{
+            &:hover{
             border-radius: rem(20);
-                }
             }
-
+        }
     }
-
     &__item{
-        margin: rem(8);
         padding:rem(8) ;
         color: $color-black;
         text-transform: uppercase;
         transition: color .2s ease-in-out;
         &--arrow{
             display: flex;
+            justify-content: center;
             flex-wrap: nowrap;
         }
         &--margin{
-            margin-left: 0;
+            margin: rem(14) rem(0);
             padding-left: rem(5); 
         }
     }
     &__list:hover>&__item{
-        color: $color-semiBlack;
-        
-        
+        color: $color-semiBlack;  
     }
-   
-    &__logo{
-        display: flex;
-        margin: rem(10);
-        align-items: center;
-    }
+
     &__dropdown{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        position: static;
-        margin-left: rem(80);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: clamp(rem(150), 55%, rem(300));
         padding: rem(5) rem(10);
-        background-color:$bgc-header;
-        box-shadow:-2px 2px 0px $color-box-shadow;
-        border-radius:0 0 rem(10) rem(10);
+        transform: translateX(-100%);
+        background-color:$color-white;
+        visibility: hidden;
+        transition:transform .3s ease-in-out, visibility .3s ease-in-out;
         cursor: pointer;
-
+        z-index: 5;
+        &--closed{
+            width: rem(20);
+            align-self: flex-end;
+            transition: transform .2s ease-in-out;
+            svg{
+            transition: color .2s ease-in-out;
+            }
+            &:hover{
+            transform: scale(1.2);
+            }
+            &:hover>svg{
+            color:$color-stroke-svg;
+            }
+        }
+        &.--Mobile{
+            transform: translateX(0);
+            visibility: inherit;
+            background-image: $linear-gradient-subMenu;
+            inset: 0.02px; //for backdrop-filter, because he has bug in the chrome.
+        }
         @include breakpoint-min(md){
-          position: absolute;
-          margin-left: auto;
+            top: 100%;
+            left: auto;
+            height: auto;
+             width: auto;
+            transform: translateX(0);
+            box-shadow:0px 2px 0px $color-box-shadow;
+            border-radius:0 0 rem(10) rem(10);
+            opacity: 0;
+            visibility: hidden;
+            transition:opacity .3s ease-in-out, visibility .3s ease-in-out;
+            .header__list--dropdown:hover>&{
+                opacity:1;
+                visibility:visible;
+            }
+            &--closed{
+                display: none;
+            }           
         }
     }
     &__dp_item{
@@ -131,13 +213,10 @@
         width: 100%;
         border-bottom: 1px solid $border;
         &:nth-last-child(1){
-        border: none;
+            border: none;
         }
         &:hover>.header__item{
-        color: $color-semiBlack;
-        } 
-       
+            color: $color-semiBlack;
+        }       
     }
-    
-
 }

@@ -16,14 +16,14 @@
 
 
     &__btn {
-        width: rem(50);
-        height: rem(50);
+        width: rem(45);
+        height: rem(45);
         cursor: pointer;
     }
 
     &__line {
         fill: none;
-        stroke: black;
+        stroke: $color-black-stroke;
         stroke-width: 6;
         pointer-events: all;
         transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -40,7 +40,7 @@
     }
 
     &__line1.opened {
-        stroke: #047276;
+        stroke: $color-stroke-svg;
         stroke-dasharray: 90 207;
         stroke-dashoffset: -134;
         stroke-width: 6;
@@ -53,7 +53,7 @@
     }
 
     &__line2.opened {
-        stroke: #047276;
+        stroke: $color-stroke-svg;
         stroke-dasharray: 1 60;
         stroke-dashoffset: -30;
         stroke-width: 6;
@@ -70,7 +70,7 @@
     }
 
     &__line3.opened {
-        stroke: #047276;
+        stroke: $color-stroke-svg;
         stroke-dasharray: 90 207;
         stroke-dashoffset: -134;
         stroke-width: 6;

@@ -1,3 +1,12 @@
-@forward 'header';
-@forward 'main';
-@forward  'footer';
+@forward 'header' ;
+@forward 'main' ;
+@forward  'footer' ;
+@use '../utils/functions' as *;
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: em(2560);
+}
+
