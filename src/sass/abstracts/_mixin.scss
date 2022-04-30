@@ -46,3 +46,50 @@
     border:rem(2) solid $bgc-box;
     transform: translate(rem(0), rem(0));
 }
+
+.video-section{
+&__more{
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+    width: clamp(9.4rem, 15vw, 12rem);
+    background-color: skyblue;
+}
+&__circle{
+    position: relative;
+    display: block;
+    width: em(28);
+    height: rem(28);
+    border-radius: rem(22);
+    background-color:#282936;    
+}
+    &__arrow{
+        position: relative;
+        display: block;
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+        &--line{
+            position: absolute;
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0.55rem;
+                right: 0.725rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+            }
+        }
+    }
+&__text--more{
+    font-size: clamp(0.7375rem,1.3vw, 1rem);
+}   
+}

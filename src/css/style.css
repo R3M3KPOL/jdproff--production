@@ -27,6 +27,7 @@ input {
 a {
   font-size: clamp(0.9375rem, -0.875rem + 2vw, 1.0625rem);
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .header__item--margin {
@@ -82,6 +83,56 @@ a {
   border: 0.125rem solid #009581;
   -webkit-transform: translate(0rem, 0rem);
           transform: translate(0rem, 0rem);
+}
+
+.video-section__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+  width: clamp(9.4rem, 15vw, 12rem);
+  background-color: skyblue;
+}
+.video-section__circle {
+  position: relative;
+  display: block;
+  width: 1.75em;
+  height: 1.75rem;
+  border-radius: 1.375rem;
+  background-color: #282936;
+}
+.video-section__arrow {
+  position: relative;
+  display: block;
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+.video-section__arrow--line {
+  position: absolute;
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+.video-section__arrow--line::before {
+  position: absolute;
+  content: "";
+  top: 0.55rem;
+  right: 0.725rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.video-section__text--more {
+  font-size: clamp(0.7375rem, 1.3vw, 1rem);
 }
 
 .hamburger {
@@ -341,7 +392,6 @@ a {
 .header__item {
   padding: 0.5rem;
   color: #004759;
-  text-transform: uppercase;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }

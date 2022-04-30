@@ -134,7 +134,6 @@
     &__item{
         padding:rem(8) ;
         color: $color-black;
-        text-transform: uppercase;
         transition: color .2s ease-in-out;
         &--arrow{
             display: flex;
