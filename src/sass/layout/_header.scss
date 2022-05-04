@@ -56,7 +56,7 @@
     cursor: pointer;
     &>a{
         color: $color-black;
-        font-size: clamp(rem(18), 3.4vw, rem(38));
+        font-size: clamp(rem(18), 3.5vw, rem(38));
     }
 
      @include breakpoint-max(md){

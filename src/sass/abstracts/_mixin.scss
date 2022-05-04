@@ -1,95 +1,100 @@
 @use 'variables' as *;
 @use '../utils/' as *;
+@use '../abstracts/media' as *;
 
 //hover effect for buttons
-.item--border::after,.item--border::before{
-    content: '';
-    display: block;
-    position: relative;
-    padding: rem(12);//12px;
-    // width: em(88);//5.5em;
-    width: 100%;
-    left: 0;
-    border: rem(2) solid $bgc-dark;
-    transition: transform .2s;
-    z-index: -1;
-}
-.item--border::before{
-    top: rem(26);//22px;
-}
-.item--border::after{
-    bottom: rem(25);//24px;
-}
+// .item--border::after,.item--border::before{
+//     content: '';
+//     display: block;
+//     position: relative;
+//     padding: rem(12);//12px;
+//     // width: em(88);//5.5em;
+//     width: 100%;
+//     left: 0;
+//     border: rem(2) solid $bgc-dark;
+//     transition: transform .2s;
+//     z-index: -1;
+// }
+// .item--border::before{
+//     top: rem(26);//22px;
+// }
+// .item--border::after{
+//     bottom: rem(25);//24px;
+// }
+// // .item--border:hover::after {
+// //     border:rem(2) solid $bgc-box;
+// //     transform: translate(rem(2.5), rem(2.5));
+// // }
+// // .item--border:hover::before {
+// //     border:rem(2) solid $bgc-box;
+// //     transform: translate(rem(-2.5), rem(-2.5));
+// // }
+// .item--border::after {
+//     border:rem(2) solid $color-hover-social;
+//     transform: translate(rem(2.5), rem(2.5));
+// }
+// .item--border::before {
+//     border:rem(2) solid $color-hover-social;
+//     transform: translate(rem(-2.5), rem(-2.5));
+// }
+
+
 // .item--border:hover::after {
 //     border:rem(2) solid $bgc-box;
-//     transform: translate(rem(2.5), rem(2.5));
+//     transform: translate(rem(0), rem(0));
 // }
 // .item--border:hover::before {
 //     border:rem(2) solid $bgc-box;
-//     transform: translate(rem(-2.5), rem(-2.5));
+//     transform: translate(rem(0), rem(0));
 // }
-.item--border::after {
-    border:rem(2) solid $color-hover-social;
-    transform: translate(rem(2.5), rem(2.5));
-}
-.item--border::before {
-    border:rem(2) solid $color-hover-social;
-    transform: translate(rem(-2.5), rem(-2.5));
-}
 
-
-.item--border:hover::after {
-    border:rem(2) solid $bgc-box;
-    transform: translate(rem(0), rem(0));
-}
-.item--border:hover::before {
-    border:rem(2) solid $bgc-box;
-    transform: translate(rem(0), rem(0));
-}
-
-.video-section{
-&__more{
-    display: flex;
-    align-items: center;
-    gap: rem(15);
-    width: clamp(9.4rem, 15vw, 12rem);
-    background-color: skyblue;
-}
-&__circle{
+.title-heading{
     position: relative;
-    display: block;
-    width: em(28);
-    height: rem(28);
-    border-radius: rem(22);
-    background-color:#282936;    
-}
-    &__arrow{
-        position: relative;
-        display: block;
-            left: 0.625rem;
-            width: 1.125rem;
-            height: 0.125rem;
-            background: none;
-        &--line{
-            position: absolute;
-            left: 0.625rem;
-            width: 1.125rem;
-            height: 0.125rem;
-            background: none;
-            &::before {
-                position: absolute;
-                content: '';
-                top: 0.55rem;
-                right: 0.725rem;
-                width: 0.625rem;
-                height: 0.625rem;
-                border-top: 0.125rem solid #fff;
-                border-right: 0.125rem solid #fff;
-                transform: rotate(45deg);
-            }
+    text-align: center;
+    // width: clamp(9rem, 18vw, 20rem);
+    width: fit-content;
+    margin: 0 auto;
+    padding: rem(16);
+    &::before{
+        content: attr(data-text);
+        position: absolute;
+        left: -20%;
+        top: rem(16);
+        background-color:$bgc-aquamarine;
+        color: transparent;
+        height: rem(18);
+        z-index: -1;
+        @include breakpoint-min(lg){
+        height: rem(25);
         }
     }
-&__text--more{
-    font-size: clamp(0.7375rem,1.3vw, 1rem);
-}   
 }
+
+.why-us{
+    &__title::before{
+        left: 1.5%;
+        top: rem(10);
+        color: transparent;
+        width: clamp(em(144),30vw,em(216));
+        z-index: -1;
+        @include breakpoint-min(md){
+        left: -4%;
+        }
+        @include breakpoint-min(lg){
+        height: rem(25);
+        }
+    }
+}
+
+
+
+    @keyframes logo-JDPROFF {
+        0%, 100%{
+            transform: translateY(0);
+        }
+       50%{
+           transform: translateY(-80px);
+       }
+
+    }
+

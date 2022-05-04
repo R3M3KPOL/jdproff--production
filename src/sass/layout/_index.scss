@@ -4,8 +4,9 @@
 @use '../utils/functions' as *;
 
 .flex-container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+	place-items: center;
+    justify-items: stretch;
     margin: 0 auto;
     max-width: em(2560);
 }

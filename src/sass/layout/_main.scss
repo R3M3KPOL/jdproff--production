@@ -1,11 +1,12 @@
 @use '../utils/functions'as *;
 @use '../abstracts' as *;
 
-
+//section - video
 .video-section{
     position: relative;
     color: $color-white;
     text-shadow: 0px 2px 10px rgb(0 71 89);
+    clip-path: polygon(0% 0%, 100% 0, 100% 35%, 100% 90%, 65% 90%, 55% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
     &__box{
         object-fit: cover;
         width: 100%;
@@ -25,11 +26,8 @@
         }
     }
 
-    &__tittle{
-        font-size: clamp(em(32), 5vw, em(56));
-    }
+ 
     &__text{
-        font-size: clamp(em(16), 2.3vw, em(24));
         padding: rem(16) 0;
     }
      &__sm{
@@ -79,3 +77,31 @@
 }
    
 }
+
+//section - top -about Us.
+
+.about-us{
+    display: grid;
+    justify-items: center;
+    grid-auto-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas:
+        "text svg"
+        "text svg";
+    padding:2rem 0;
+    &__header{
+    display: grid;
+    align-content: space-evenly;
+    grid-area: text;
+    }
+    &__image-svg{
+    grid-area: svg;
+    height: 100%;
+    width: clamp(10em, 22vw, 20em);
+    animation: logo-JDPROFF 12s ease-in-out infinite;
+    }
+}
+
+
+
+
