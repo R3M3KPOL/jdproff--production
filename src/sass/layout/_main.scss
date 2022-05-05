@@ -100,7 +100,11 @@
     width: clamp(10em, 22vw, 20em);
     animation: logo-JDPROFF 12s ease-in-out infinite;
     }
+    &__text--first,&__text--second{
+        padding: rem(10);
+    }
 }
+
 
 
 
