@@ -157,20 +157,21 @@
         top: 0;
         left: 0;
         height: 100%;
-        width: clamp(rem(150), 55%, rem(300));
+        width: clamp(rem(180), 55%, rem(300));
         padding: rem(5) rem(10);
         transform: translateX(-100%);
         background-color:$color-white;
         visibility: hidden;
         transition:transform .3s ease-in-out, visibility .3s ease-in-out;
-        cursor: pointer;
         z-index: 5;
         &--closed{
-            width: rem(20);
+            width: rem(24);
             align-self: flex-end;
             transition: transform .2s ease-in-out;
             svg{
             transition: color .2s ease-in-out;
+            height: 100%;
+            width: 100%;
             }
             &:hover{
             transform: scale(1.2);

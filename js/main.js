@@ -9,9 +9,6 @@ const dropDown = document.querySelector('.header__item--arrow');
 const closeUlList = document.querySelector('.header__dropdown--closed');
 let mediaQuery = window.matchMedia('(min-width: 768px)');
 
-let flag = true;
-
-
 // viewBox.setAttribute("viewBox", "50 0 100 100")
 
 const showMenu =()=> {
@@ -31,7 +28,6 @@ const showMenu =()=> {
 const dropDownMenu =()=> {
     ulList.classList.add('--Mobile');
     if(ulList.classList.contains('--Mobile')){
-        console.log('ul list')
         blurBg.classList.add('--open')
     }
 }
@@ -42,7 +38,7 @@ const closedUlList =()=>{
 };
 
 const removeClass =(e)=> {
-    if(e.target ===blurBg){
+    if(e.target === blurBg){
         closedUlList()
     }
 }
@@ -50,7 +46,6 @@ const removeClass =(e)=> {
 const changeListener =(evt)=>{
     if(!evt.matches){
     dropDown.addEventListener("click", dropDownMenu)
-    
     }
     else{
     dropDown.removeEventListener("click",dropDownMenu)
