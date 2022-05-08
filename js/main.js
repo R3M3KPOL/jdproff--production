@@ -1,5 +1,7 @@
-const menuLines = document.querySelectorAll('.hamburger__line');
-const menuBtn = document.querySelector('.hamburger__btn');
+const root = document.documentElement;
+const figureContent = document.querySelector('.slider-gallery__container');
+const menuLines = document.querySelectorAll('.btn__line');
+const menuBtn = document.querySelector('.btn__hamburger');
 const menuList = document.querySelector('.header__items');
 const ulList = document.querySelector('.header__dropdown');
 const blurBg = document.querySelector('.header__blurBg')
@@ -58,7 +60,12 @@ const changeListener =(evt)=>{
 changeListener(mediaQuery)
 
 
-
+//slider-carousel
+const elementsDisplayed = getComputedStyle(root).getPropertyValue("--elements-displayed");
+root.style.setProperty("--all-elements", figureContent.children.length);
+for(let i=0; i<elementsDisplayed; i++) {
+  figureContent.appendChild(figureContent.children[i].cloneNode(true));
+}
 
 
 

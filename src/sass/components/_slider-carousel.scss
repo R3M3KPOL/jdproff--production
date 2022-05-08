@@ -1,0 +1,52 @@
+//slider gallery
+@use '../abstracts' as *;
+@use '../utils' as *;
+
+.slider-gallery{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: skyblue;
+    overflow-y: hidden;
+    &--overflow-center{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: var(--width-container);
+    }
+    &__container{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    height: rem(300);
+    width: 100%;
+    animation: scrolling var(--animation-duration) linear infinite;
+        @keyframes scrolling {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-1 * var(--elements-width) * var(--all-elements))); }
+        }
+    }
+    &__figure{
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    height: rem(225);
+    width:var(--elements-width);
+    transition: transform .2s ease-in-out;
+    cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+        }
+}
+    &__photo{
+    object-fit: cover;
+    width: clamp(11rem, 25vw, 18rem);
+    }
+&__btn{
+    align-self: flex-end;
+    &--show-more{
+    @include  show-more-btn;
+    }
+}
+}

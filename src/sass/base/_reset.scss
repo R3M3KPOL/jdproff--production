@@ -1,3 +1,5 @@
+@use '../utils/functions' as * ;
+
 *,
 ::before,
 ::after {
@@ -6,4 +8,12 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+.grid-container{
+    display: grid;
+	place-items: center;
+    justify-items: stretch;
+    margin: 0 auto;
+    max-width: em(2560);
 }

@@ -1,13 +1,7 @@
 @forward 'header' ;
 @forward 'main' ;
 @forward  'footer' ;
-@use '../utils/functions' as *;
 
-.flex-container{
-    display: grid;
-	place-items: center;
-    justify-items: stretch;
-    margin: 0 auto;
-    max-width: em(2560);
-}
+
+
 

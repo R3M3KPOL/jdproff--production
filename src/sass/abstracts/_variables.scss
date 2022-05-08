@@ -1,6 +1,25 @@
 @use '../utils/functions' as *;
+@use '../abstracts/media' as *;
 
-//colors&bgc
+:root{
+--width-container:clamp(40em, 80vw, 132em);;
+--elements-displayed:2;
+// --all-elements: 14;
+--elements-width: calc(var(--width-container) / var(--elements-displayed));
+--animation-duration: calc(var(--all-elements) * 4s);
+
+@include breakpoint-min(md){
+    --elements-displayed: 2.5;
+}
+
+@include breakpoint-min(lg){
+    --elements-displayed: 3;
+}
+@include breakpoint-min(xxl){
+    --elements-displayed: 4;
+}
+
+}
 
 //backgrounds
 $bgc-aquamarine:#009581;
