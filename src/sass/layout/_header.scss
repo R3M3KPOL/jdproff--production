@@ -107,9 +107,9 @@
            height: auto;
            transform: translateX(0);
         }
-        @include breakpoint-between(md, lg){
+        @include breakpoint-min-max-or(md, lg, landscape){
             gap: 0;
-        }
+}
     }
 
     &__items.open {
@@ -130,6 +130,9 @@
             border-radius: rem(20);
             }
         }
+         @include breakpoint-landscape(landscape){
+              padding: rem(5) rem(10);
+            }
     }
     &__item{
         padding:rem(8) ;
@@ -139,10 +142,6 @@
             display: flex;
             justify-content: center;
             flex-wrap: nowrap;
-        }
-        &--margin{
-            margin: rem(14) rem(0);
-            padding-left: rem(5); 
         }
     }
     &__list:hover>&__item{
@@ -165,8 +164,10 @@
         transition:transform .3s ease-in-out, visibility .3s ease-in-out;
         z-index: 5;
         &--closed{
-            width: rem(24);
+            box-sizing: content-box;
             align-self: flex-end;
+            width: rem(24);
+            padding: rem(8);
             transition: transform .2s ease-in-out;
             svg{
             transition: color .2s ease-in-out;
@@ -179,12 +180,20 @@
             &:hover>svg{
             color:$color-stroke-svg;
             }
+            svg>path{
+                transform: translateX(15%);
+            }
         }
         &.--Mobile{
+            gap: rem(22);
+            padding-left: rem(5); 
+            background-image: $linear-gradient-subMenu;
             transform: translateX(0);
             visibility: inherit;
-            background-image: $linear-gradient-subMenu;
             inset: 0.02px; //for backdrop-filter, because he has bug in the chrome.
+            @include breakpoint-landscape(landscape){
+                gap: rem(10);
+            }
         }
         @include breakpoint-min(md){
             top: 100%;
@@ -217,6 +226,7 @@
         }
         &:hover>.header__item{
             color: $color-semiBlack;
-        }       
+        }
+        
     }
 }

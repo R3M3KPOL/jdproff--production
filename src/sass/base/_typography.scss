@@ -38,15 +38,11 @@ padding: rem(16);
 }
 
 a{  
-    font-size: clamp(rem(13.5), 1vw, rem(17));
+    font-size: clamp(rem(13), 1vw, rem(17));
     font-weight: bold;
     text-transform: uppercase;
 }
 
-
-.header__item--margin{
-    font-size: rem(14);
-}
 
 .fa-arrow-down{
     font-size: rem(15);

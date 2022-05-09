@@ -1,11 +1,6 @@
 @use '../utils'as *;
 
-
-// $breakpoints: (
-//     'medium': (min-width: em(640)),
-//     'large': (min-width: em(1040)),
-//     'huge': (min-width: em(1200)),
-// );
+$em : 0.0625000000em;  //for ''$breakpoint''.
 
 $breakpoints: (
   'sm': em(576),//576px,
@@ -13,6 +8,7 @@ $breakpoints: (
   'lg': em(992),//992px,
   'xl': em(1200),//1200px,
   'xxl': em(1400),//1400px
+  'landscape' : landscape,
 );
 
 @mixin breakpoint-min($size) {
@@ -28,9 +24,42 @@ $breakpoints: (
     }
     
 }
+@mixin breakpoint-landscape($orientation){
+    @media (orientation:map-get($breakpoints,$orientation)){
+        @content
+    }
+}
 
 @mixin breakpoint-between($sizemin, $sizemax){
     @media (min-width:map-get($breakpoints, $sizemin)) and (max-width:map-get($breakpoints,$sizemax)){
-        @content
+        @content;
     }
+}
+
+@mixin breakpoint-min-max-or($sizemin, $sizemax, $orientation){
+    @media (min-width:map-get($breakpoints, $sizemin)) and (max-width:map-get($breakpoints,$sizemax)), (orientation:map-get($breakpoints,$orientation)){
+        @content;
+    }
+}
+
+
+@mixin breakpoint($size, $direction) {
+    @if map-has-key($breakpoints, $size){
+        $breakpoint-value:map-get($breakpoints, $size);
+        @if $direction == max {
+            @media (max-width:($breakpoint-value -$em)){
+                @content;
+            }
+        }
+        @else if $direction == min {
+            @media (min-width:$breakpoint-value){
+                @content;
+            }
+        }
+        @else {
+      @media ($direction: $breakpoint-value) {
+        @content;
+      }
+    }
+}
 }

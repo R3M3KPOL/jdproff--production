@@ -76,13 +76,9 @@ p {
 }
 
 a {
-  font-size: clamp(0.84375rem, 1vw, 1.0625rem);
+  font-size: clamp(0.8125rem, 1vw, 1.0625rem);
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.header__item--margin {
-  font-size: 0.875rem;
 }
 
 .fa-arrow-down {
@@ -320,7 +316,7 @@ a {
             transform: translateX(0);
   }
 }
-@media (min-width: 48em) and (max-width: 62em) {
+@media (min-width: 48em) and (max-width: 62em), (orientation: landscape) {
   .header__items {
     gap: 0;
   }
@@ -349,6 +345,11 @@ a {
 .header__list:nth-child(5):hover {
   border-radius: 1.25rem;
 }
+@media (orientation: landscape) {
+  .header__list {
+    padding: 0.3125rem 0.625rem;
+  }
+}
 .header__item {
   padding: 0.5rem;
   color: #004759;
@@ -364,10 +365,6 @@ a {
           justify-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-}
-.header__item--margin {
-  margin: 0.875rem 0rem;
-  padding-left: 0.3125rem;
 }
 .header__list:hover > .header__item {
   color: #05d1b6;
@@ -400,9 +397,12 @@ a {
   z-index: 5;
 }
 .header__dropdown--closed {
-  width: 1.5rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  width: 1.5rem;
+  padding: 0.5rem;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
@@ -421,12 +421,23 @@ a {
 .header__dropdown--closed:hover > svg {
   color: #047276;
 }
+.header__dropdown--closed svg > path {
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
+}
 .header__dropdown.--Mobile {
+  gap: 1.375rem;
+  padding-left: 0.3125rem;
+  background-image: linear-gradient(340deg, #09c6ac, #3dc3b0, #72d7c9, #acf3e9, #cbf5ef, #fbfbfb, #f8f8f8, #f8f9fa, #fafafb, #fcfcfd, #fdfdfe, #ffffff);
   -webkit-transform: translateX(0);
           transform: translateX(0);
   visibility: inherit;
-  background-image: linear-gradient(340deg, #09c6ac, #3dc3b0, #72d7c9, #acf3e9, #cbf5ef, #fbfbfb, #f8f8f8, #f8f9fa, #fafafb, #fcfcfd, #fdfdfe, #ffffff);
   inset: 0.02px;
+}
+@media (orientation: landscape) {
+  .header__dropdown.--Mobile {
+    gap: 0.625rem;
+  }
 }
 @media (min-width: 48em) {
   .header__dropdown {
