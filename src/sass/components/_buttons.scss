@@ -70,7 +70,7 @@
 
 }
 
-//show more - video button
+//learn more - video button
 .video-section{
 &__more{
     position: relative;
@@ -78,7 +78,7 @@
     align-items: center;
     width: clamp(8.2rem, 15vw, 12rem);
     border-radius: rem(22);
-    background-color:$color-hover-social;
+    background-color:$color-fake-jade;
     transition: background .6s cubic-bezier(0.65,0,.076,1);
     cursor: pointer;
     &:hover{

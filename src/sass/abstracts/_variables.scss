@@ -2,7 +2,7 @@
 @use '../abstracts/media' as *;
 
 :root{
---width-container:clamp(40em, 80vw, 132em);;
+--width-container:clamp(40em, 100vw, 130em);;
 --elements-displayed:2;
 // --all-elements: 14;
 --elements-width: calc(var(--width-container) / var(--elements-displayed));
@@ -30,13 +30,14 @@ $bgc-shadow:#00475966;
 //colors
 $color-white:#f5f5f5;
 $color-black:#004759;
-$color-semiBlack:#05d1b6;
-$color-hover-social:#09e6c9;
+$color-channel-marker-green:#05d1b6;
+$color-fake-jade:#dcfbf6;
 
 //line-stroke-svg
 $color-stroke-svg:#047276;
 $color-black-stroke:#252525;
 //another animations
+$color-black-opacity:#25252510;
 $border:#04af9827;
 $border-line-bottom:#dbdbdb;
 $color-box-shadow:#04af98;

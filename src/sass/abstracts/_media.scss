@@ -1,6 +1,6 @@
 @use '../utils'as *;
 
-$em : 0.0625000000em;  //for ''$breakpoint''.
+$em : 0.0625000000em;  //for ''$breakpoint = -1px''.
 
 $breakpoints: (
   'sm': em(576),//576px,
@@ -26,7 +26,7 @@ $breakpoints: (
 }
 @mixin breakpoint-landscape($orientation){
     @media (orientation:map-get($breakpoints,$orientation)){
-        @content
+        @content;
     }
 }
 

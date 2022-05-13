@@ -2,9 +2,34 @@
 @use '../abstracts/media' as *;
 @use '../utils/' as *;
 
+//this mixin ''show-more-btn'' is style for few buttons.
+//another buttons style his in the _buttons.scss
 @mixin show-more-btn {
-    border: 1px solid $bgc-aquamarine;
-    
+    color: $color-black;
+    font-size: clamp(0.655rem, 0.8vw, 0.9rem);
+    padding: rem(8);
+    transition: color .3s ease-in-out;
+    &::after,&::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 1px solid $bgc-aquamarine;
+    }
+    &:hover {
+        color: $bgc-aquamarine;
+    }
+    &::before,&::after{
+        transition: transform .3s ease-in-out;
+    }
+    &:hover::before{
+        transform: translate(-3%,-10%);
+    }
+    &:hover::after{
+    transform: translate(3%, 10%);
+}
 }
 
 .title-heading{

@@ -18,7 +18,7 @@
 }
 
 :root {
-  --width-container:clamp(40em, 80vw, 132em);
+  --width-container:clamp(40em, 100vw, 130em);
   --elements-displayed:2;
   --elements-width: calc(var(--width-container) / var(--elements-displayed));
   --animation-duration: calc(var(--all-elements) * 4s);
@@ -380,11 +380,12 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  gap: 1rem;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  width: clamp(11.25rem, 55%, 18.75rem);
+  width: clamp(11.25rem, 55%, 15rem);
   padding: 0.3125rem 0.625rem;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -444,7 +445,6 @@ a {
     top: 100%;
     left: auto;
     height: auto;
-    width: auto;
     -webkit-transform: translateX(0);
             transform: translateX(0);
     -webkit-box-shadow: 0px 2px 0px #04af98;
@@ -552,7 +552,7 @@ a {
           align-items: center;
   width: clamp(8.2rem, 15vw, 12rem);
   border-radius: 1.375rem;
-  background-color: #09e6c9;
+  background-color: #dcfbf6;
   -webkit-transition: background 0.6s cubic-bezier(0.65, 0, 0.076, 1);
   transition: background 0.6s cubic-bezier(0.65, 0, 0.076, 1);
   cursor: pointer;
@@ -752,7 +752,6 @@ a {
 }
 .about-us__image-svg {
   grid-area: svg;
-  height: 100%;
   width: clamp(10em, 22vw, 20em);
   -webkit-animation: logo-JDPROFF 12s ease-in-out infinite;
           animation: logo-JDPROFF 12s ease-in-out infinite;
@@ -766,7 +765,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  background: skyblue;
+  background: rgba(37, 37, 37, 0.062745098);
   overflow-y: hidden;
 }
 .slider-gallery--overflow-center {
@@ -784,15 +783,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  height: 18.75rem;
   width: 100%;
+  padding: 1.375rem 0;
   -webkit-animation: scrolling var(--animation-duration) linear infinite;
           animation: scrolling var(--animation-duration) linear infinite;
 }
@@ -840,20 +836,53 @@ a {
 .slider-gallery__photo {
   -o-object-fit: cover;
      object-fit: cover;
-  width: clamp(11rem, 25vw, 18rem);
+  width: clamp(13.75rem, 25vw, 18.125rem);
+  -webkit-box-shadow: 0px 0px 4px #004759;
+          box-shadow: 0px 0px 4px #004759;
 }
 .slider-gallery__btn {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-transform: translate(-100%, -25%);
+          transform: translate(-100%, -25%);
+  color: #004759;
+  font-size: clamp(0.655rem, 0.8vw, 0.9rem);
+  padding: 0.5rem;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
-.slider-gallery__btn--show-more {
+.slider-gallery__btn::after, .slider-gallery__btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   border: 1px solid #009581;
+}
+.slider-gallery__btn:hover {
+  color: #009581;
+}
+.slider-gallery__btn::before, .slider-gallery__btn::after {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.slider-gallery__btn:hover::before {
+  -webkit-transform: translate(-3%, -10%);
+          transform: translate(-3%, -10%);
+}
+.slider-gallery__btn:hover::after {
+  -webkit-transform: translate(3%, 10%);
+          transform: translate(3%, 10%);
 }
 
 .main {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(8, auto);
+  gap: 2rem;
 }
 
 .footer {

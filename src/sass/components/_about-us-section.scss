@@ -18,7 +18,6 @@
     }
     &__image-svg{
     grid-area: svg;
-    height: 100%;
     width: clamp(10em, 22vw, 20em);
     animation: logo-JDPROFF 12s ease-in-out infinite;
     }

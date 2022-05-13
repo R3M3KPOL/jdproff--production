@@ -2,25 +2,27 @@
 @use '../abstracts' as *;
 @use '../utils' as *;
 
+
 .slider-gallery{
     display: flex;
     justify-content: center;
     width: 100%;
-    background: skyblue;
+    background: $color-black-opacity;
     overflow-y: hidden;
+
     &--overflow-center{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    // height: rem(300);
     width: var(--width-container);
     }
     &__container{
     display: flex;
-    align-items: center;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    height: rem(300);
     width: 100%;
+    padding: rem(22) 0;
     animation: scrolling var(--animation-duration) linear infinite;
         @keyframes scrolling {
             0% { transform: translateX(0); }
@@ -41,12 +43,13 @@
 }
     &__photo{
     object-fit: cover;
-    width: clamp(11rem, 25vw, 18rem);
+    width: clamp(rem(220), 25vw , rem(290));
+    box-shadow: 0px 0px 4px $bgc-button;
     }
 &__btn{
     align-self: flex-end;
-    &--show-more{
+    transform: translate(-100%,-25%);
     @include  show-more-btn;
-    }
+
 }
 }
