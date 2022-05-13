@@ -1,6 +1,6 @@
-@use '../components/buttons';
+
 @use '../utils/functions'as *;
-@use '../abstracts' as *;
+@use '../abstracts/'as *;
 
 //MD - media query - 768px.
 
@@ -107,9 +107,9 @@
            height: auto;
            transform: translateX(0);
         }
-        @include breakpoint-between(md, lg){
+        @include breakpoint-min-max-or(md, lg, landscape){
             gap: 0;
-        }
+}
     }
 
     &__items.open {
@@ -130,6 +130,9 @@
             border-radius: rem(20);
             }
         }
+         @include breakpoint-landscape(landscape){
+              padding: rem(5) rem(10);
+            }
     }
     &__item{
         padding:rem(8) ;
@@ -140,37 +143,37 @@
             justify-content: center;
             flex-wrap: nowrap;
         }
-        &--margin{
-            margin: rem(14) rem(0);
-            padding-left: rem(5); 
-        }
     }
     &__list:hover>&__item{
-        color: $color-semiBlack;  
+        color: $color-channel-marker-green;  
     }
 
     &__dropdown{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: rem(16);
         position: fixed;
         top: 0;
         left: 0;
         height: 100%;
-        width: clamp(rem(150), 55%, rem(300));
+        width: clamp(rem(180), 55%, rem(240));
         padding: rem(5) rem(10);
         transform: translateX(-100%);
         background-color:$color-white;
         visibility: hidden;
         transition:transform .3s ease-in-out, visibility .3s ease-in-out;
-        cursor: pointer;
         z-index: 5;
         &--closed{
-            width: rem(20);
+            box-sizing: content-box;
             align-self: flex-end;
+            width: rem(24);
+            padding: rem(8);
             transition: transform .2s ease-in-out;
             svg{
             transition: color .2s ease-in-out;
+            height: 100%;
+            width: 100%;
             }
             &:hover{
             transform: scale(1.2);
@@ -178,18 +181,25 @@
             &:hover>svg{
             color:$color-stroke-svg;
             }
+            svg>path{
+                transform: translateX(15%);
+            }
         }
         &.--Mobile{
+            gap: rem(22);
+            padding-left: rem(5); 
+            background-image: $linear-gradient-subMenu;
             transform: translateX(0);
             visibility: inherit;
-            background-image: $linear-gradient-subMenu;
             inset: 0.02px; //for backdrop-filter, because he has bug in the chrome.
+            @include breakpoint-landscape(landscape){
+                gap: rem(10);
+            }
         }
         @include breakpoint-min(md){
             top: 100%;
             left: auto;
             height: auto;
-             width: auto;
             transform: translateX(0);
             box-shadow:0px 2px 0px $color-box-shadow;
             border-radius:0 0 rem(10) rem(10);
@@ -215,7 +225,8 @@
             border: none;
         }
         &:hover>.header__item{
-            color: $color-semiBlack;
-        }       
+            color: $color-channel-marker-green;
+        }
+        
     }
 }

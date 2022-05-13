@@ -1,7 +1,7 @@
 @use '../utils' as *;
 @use '../abstracts' as *;
 
-.hamburger {
+.btn {
     position: absolute;
     top: rem(10);
     right: rem(10);
@@ -15,7 +15,7 @@
        }
 
 
-    &__btn {
+    &__hamburger {
         width: rem(45);
         height: rem(45);
         cursor: pointer;
@@ -33,10 +33,6 @@
     &__line1 {
         stroke-dasharray: 60 207;
         stroke-width: 6;
-
-        // &:hover {
-        //     stroke-dasharray: 40 207;
-        // }
     }
 
     &__line1.opened {
@@ -63,10 +59,6 @@
     &__line3 {
         stroke-dasharray: 40 207;
         stroke-width: 6;
-
-        // &:hover {
-        //     stroke-dasharray: 60 207;
-        // }
     }
 
     &__line3.opened {
@@ -78,7 +70,7 @@
 
 }
 
-//show more - video button
+//learn more - video button
 .video-section{
 &__more{
     position: relative;
@@ -86,7 +78,7 @@
     align-items: center;
     width: clamp(8.2rem, 15vw, 12rem);
     border-radius: rem(22);
-    background-color:$color-hover-social;
+    background-color:$color-fake-jade;
     transition: background .6s cubic-bezier(0.65,0,.076,1);
     cursor: pointer;
     &:hover{
@@ -110,9 +102,7 @@
     position: relative;
     display: block;
     width: em(25);
-    // width: em(28);
     height: rem(25);
-    // height: rem(28);
     border-radius: rem(22);
     background-color:$bgc-dark; 
     transition: width .4s cubic-bezier(0.65,0,.076,1);

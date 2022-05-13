@@ -1,108 +1,13 @@
 @use '../utils/functions'as *;
 @use '../abstracts' as *;
+@use '../components' as *;
 
-//section - video
-.video-section{
-    position: relative;
-    color: $color-white;
-    text-shadow: 0px 2px 10px rgb(0 71 89);
-    clip-path: polygon(0% 0%, 100% 0, 100% 35%, 100% 90%, 65% 90%, 55% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
-    &__box{
-        object-fit: cover;
-        width: 100%;
-        height: 100vh;
-    }
-    &__heading{
-        position:absolute;
-        inset: 50% 0 0 0;
-        transform: translateY(-25%);
-        max-width: 60vw;
-        line-height: 1.2;
-        @include breakpoint-min(md){
-        padding:$padding;
-        }
-        @include breakpoint-max(lg){
-        inset: 50% 0 0 5%;   
-        }
-    }
 
- 
-    &__text{
-        padding: rem(16) 0;
-    }
-     &__sm{
-        display: inline-flex;
-        gap: rem(24);
-        align-items: center;
-        padding: rem(16) 0;
-    }
-
-    &__icon>a>svg{
-    width:clamp(rem(22),2vw,rem(28)) ;
-    min-height: rem(22);
-    max-height: rem(28);
-    padding: rem(4);
-    fill: $color-white;
-    border-radius: rem(10);
-    cursor: pointer; 
-    transition: fill .2s ease-in-out, box-shadow .2s ease-in-out, transform .3s ease-in-out, background-color .2s ease-in-out;
-}
-&__icon{
-    &--fb{
-        &:hover{
-        fill:$sm-facebook;
-        box-shadow: 0px 5px 10px rgb(0, 71, 89);
-        transform: scale(1.1);
-        background-color:#c6defd7c;
-        }
-    }
-    &--instagram{
-        &:hover {
-            fill: $sm-instagram;
-            box-shadow: 0px 5px 10px rgb(0 71 89);
-            transform: scale(1.1);
-            background-color:#fca6b67e;
-        }
-
-    }
-    &--email{
-        &:hover {
-            fill:$sm-email;
-            box-shadow: 0px 5px 10px rgb(0 71 89);
-            transform: scale(1.1);
-            background-color:rgba(194, 192, 192, 0.493);
-        }
-    }
-
-}
-   
-}
-
-//section - top -about Us.
-
-.about-us{
+.main{
     display: grid;
-    justify-items: center;
-    grid-auto-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr ;
-    grid-template-areas:
-        "text svg"
-        "text svg";
-    padding:2rem 0;
-    &__header{
-    display: grid;
-    align-content: space-evenly;
-    grid-area: text;
-    }
-    &__image-svg{
-    grid-area: svg;
-    height: 100%;
-    width: clamp(10em, 22vw, 20em);
-    animation: logo-JDPROFF 12s ease-in-out infinite;
-    }
-    &__text--first,&__text--second{
-        padding: rem(10);
-    }
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8,auto);
+    gap: rem(32);
 }
 
 
