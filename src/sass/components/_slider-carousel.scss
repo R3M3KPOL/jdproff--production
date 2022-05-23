@@ -46,10 +46,10 @@
     width: clamp(rem(220), 25vw , rem(290));
     box-shadow: 0px 0px 4px $bgc-button;
     }
-&__btn{
-    align-self: flex-end;
-    transform: translate(-100%,-25%);
-    @include  show-more-btn;
+    &__btn{
+        align-self: flex-end;
+        transform: translate(-100%,-25%);
+        @include  show-more-btn;
 
-}
+    }
 }

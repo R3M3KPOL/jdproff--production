@@ -1,0 +1,77 @@
+@use '../utils/functions'as *;
+@use '../abstracts' as *;
+
+.why-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     gap: rem(80);
+    &__container{
+        position: relative;
+        min-height: 40vh;
+        height: rem(550);
+        max-width: em(1000);
+        margin: rem(48) 0;
+        padding: rem(32);
+        &:nth-child(even) {
+            background-color:skyblue;
+        }
+        &:nth-child(odd) {
+            // display: flex;
+            // align-items: flex-end;
+            background-color:tomato;
+        }
+    }
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+    &__jpg{
+        position: absolute;
+        object-fit: cover;
+        transition:opacity .5s ease-in-out, transform 1.5s ease-in-out;
+        opacity: 0;
+
+         &--first{
+          top: 50%;
+          left: -25%;
+          z-index: 1;
+        }
+        &--second{
+        top: -10%;
+        right: -5%;
+        }    
+        &--third{
+        bottom: -20%;
+        }
+        &--fourth{
+        top: 10%;
+        right: -40%;
+        }
+        &--fifth{
+            top: -10%;
+        }
+        &--sixth{
+        bottom: -15%;
+        right: -10%;
+        }
+        &--seventh{
+        top: 40%;
+        right: 25%;
+        z-index: 1;
+        }
+        &--eighth{
+        bottom: -35%;
+        left: -45%;
+        }
+        &--ninth{
+        top: 0;
+        right: -55%;
+        }
+    }
+   
+}
+
+@include fades;
