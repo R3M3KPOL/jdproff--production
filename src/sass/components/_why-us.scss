@@ -8,19 +8,11 @@
      gap: rem(80);
     &__container{
         position: relative;
-        min-height: 40vh;
-        height: rem(550);
+        height: rem(640);
         max-width: em(1000);
         margin: rem(48) 0;
         padding: rem(32);
-        &:nth-child(even) {
-            background-color:skyblue;
-        }
-        &:nth-child(odd) {
-            // display: flex;
-            // align-items: flex-end;
-            background-color:tomato;
-        }
+        background-color:$color-fake-jade;
     }
     &__header{
         display: flex;
@@ -34,41 +26,42 @@
         transition:opacity .5s ease-in-out, transform 1.5s ease-in-out;
         opacity: 0;
 
+
          &--first{
-          top: 50%;
-          left: -25%;
+          top: rem(280);
+          left: rem(-160);
           z-index: 1;
         }
         &--second{
-        top: -10%;
-        right: -5%;
+         top: rem(-80);
+        right: rem(-80);
         }    
         &--third{
-        bottom: -20%;
+        bottom: rem(-80);
         }
         &--fourth{
-        top: 10%;
-        right: -40%;
+        top: rem(40);
+        right: rem(-360);
         }
         &--fifth{
-            top: -10%;
+            top: rem(-10);
         }
         &--sixth{
-        bottom: -15%;
-        right: -10%;
+        bottom: rem(40);
+        right: rem(-100);
         }
         &--seventh{
-        top: 40%;
-        right: 25%;
+        top: rem(200);
+        right: rem(250);
         z-index: 1;
         }
         &--eighth{
-        bottom: -35%;
-        left: -45%;
+        bottom:rem(-120);
+        left: rem(-380);
         }
         &--ninth{
-        top: 0;
-        right: -55%;
+        top: rem(-60);
+        right: rem(-420);
         }
     }
    

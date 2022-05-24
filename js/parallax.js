@@ -13,7 +13,7 @@ const filterItems = (el, index) => {
 const options = [
     {
     root: null,
-    threshold:0.10,
+    threshold:0.20,
     rootMargin: '0px',
     },
 
