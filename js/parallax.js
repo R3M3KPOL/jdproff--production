@@ -1,5 +1,5 @@
 const figures = document.querySelectorAll('.slider-gallery__photo');
-let images = document.querySelectorAll('img')
+let images = document.querySelectorAll('picture')
 let imagesArr = [...images]
 
 

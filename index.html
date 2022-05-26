@@ -137,8 +137,8 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                         tjenestene vi tilbyr, er
                         grunnlaget for et vellykket prosjekt.</p>
                 </header>
-                <img data-name="images" class="about-us__image-svg" src="./src/img/photo/inne/jdproff_logo-about-svg.svg"
-                    alt="logo firmy jdproff">
+                <img data-name="images" class="about-us__image-svg"
+                    src="./src/img/photo/inne/jdproff_logo-about-svg.svg" alt="logo firmy jdproff">
             </section>
 
             <section class="slider-gallery">
@@ -195,7 +195,7 @@ podejmujemy się długoterminowych prac wyjazdowych.">
             </section>
 
 
-            <section data-parralax ='parralax' class="why-us wrapper-style">
+            <section class="why-us wrapper-style">
                 <h2 data-text="HVORFOR BØR DU STOLE" class="why-us__title title-heading">HVORFOR BØR DU STOLE PÅ OSS?
                 </h2>
                 <section class="why-us__container">
@@ -207,10 +207,21 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                             opprettholder vi attraktive priser. Vår fordel er også et
                             godt koordinert team som er klar til å takle hver utfordring.</p>
                     </header>
-                    <img data-name="images-right" class="why-us__jpg why-us__jpg--first" src="./src/img/photo/inne/biały domek - patio przed.jpg"
+
+
+
+                    <picture class="why-us__jpg why-us__jpg--first" data-name="images-right">
+                        <source media="(max-width: 960px)"
+                        srcset="/src/img/photo/inne/alternatywna wersja 250szer/biały domek - patio przed.250.jpg"
+                        >
+                        <img
+                        src="./src/img/photo/inne/biały domek - patio przed.jpg"
                         alt="en plan av en leilighet som ligger på et trebord" class="whyUs__item-img">
-                    <img data-name="images" class="why-us__jpg why-us__jpg--second" src="./src/img/photo/inne/biały domek - patio po.jpg"
-                        alt="en plan av en leilighet som ligger på et trebord" class="whyUs__item-img">
+                    </picture>
+
+                    <picture class="why-us__jpg why-us__jpg--second" data-name="images"><img 
+                        src="./src/img/photo/inne/biały domek - patio po.jpg"
+                        alt="en plan av en leilighet som ligger på et trebord" class="whyUs__item-img"></picture>
                 </section>
                 <section class="why-us__container">
                     <header class="why-us__header">
@@ -221,13 +232,13 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                             interiøretterbehandling av leiligheter, og stadig utvider vi
                             vår kunnskaper og ferdigheter.</p>
                     </header>
-                    <img data-name="images" class="why-us__jpg why-us__jpg--third" src="./src/img/photo/inne/taras przed.jpg" alt=""
-                        class="why-us__item-img">
-                    <img data-name="images-left" class="why-us__jpg why-us__jpg--fourth" src="./src/img/photo/inne/taras po.jpg" alt=""
-                        class="why-us__item-img">
+                    <picture class="why-us__jpg why-us__jpg--third" data-name="images" ><img
+                        src="./src/img/photo/inne/taras przed.jpg" alt="" class="why-us__item-img"></picture>
+                    <picture class="why-us__jpg why-us__jpg--fourth" data-name="images-left"><img 
+                        src="./src/img/photo/inne/taras po.jpg" alt="" class="why-us__item-img"></picture>
 
                 </section>
-                <section class="why-us__container data-description ='parralax-scroll">
+                <section class="why-us__container">
                     <header class="why-us__header">
                         <h3 class="why-us__subtitle sub-title">Åpenhet</h3>
                         <p class="why-us__item-text tekst-box fade-in">Vi er ikke redd for ukonvensjonelle ideer, på
@@ -235,9 +246,10 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                             dem kan
                             vi utvide vår kunnskap innen renovering og bygging.</p>
                     </header>
-                    <img data-name="images-bottom" class="why-us__jpg why-us__jpg--fifth" src="./src/img/photo/inne/łazienka przed.jpg" alt="">
-                    <img data-name="images" class="why-us__jpg why-us__jpg--sixth" src="./src/img/photo/inne/łazienka po.jpg" alt=""
-                        class="why-us__item-img">
+                    <picture class="why-us__jpg why-us__jpg--fifth" data-name="images-bottom"><img 
+                        src="./src/img/photo/inne/łazienka przed.jpg" alt=""></picture>
+                    <picture class="why-us__jpg why-us__jpg--sixth" data-name="images"><img 
+                        src="./src/img/photo/inne/łazienka po.jpg" alt="" class="why-us__item-img"></picture>
                 </section>
                 <section class="why-us__container">
                     <header class="why-us__header">
@@ -245,11 +257,14 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                         <p class="why-us__item-text tekst-box fade-in">Vi tilbyr høflige og profesjonelle tjenester og
                             kundetilfredshet garanti med arbeidet vi har fått.</p>
                     </header>
-
-                    <img data-name="images" class="why-us__jpg why-us__jpg--seventh" src="./src/img/photo/inne/biały domek przed.jpg" alt="">
-                    <img data-name="images-right" class="why-us__jpg why-us__jpg--eighth" src="./src/img/photo/inne/biały domek po.jpg" alt="">
-                    <img data-name="images-left" class="why-us__jpg why-us__jpg--ninth" src="./src/img/photo/inne/biały domek po (2).jpg" alt="">
-
+                    <picture class="why-us__jpg why-us__jpg--seventh" data-name="images">
+                        <img
+                            src="./src/img/photo/inne/biały domek przed.jpg" alt="">
+                    </picture>
+                    <picture class="why-us__jpg why-us__jpg--eighth" data-name="images-right"><img 
+                            src="./src/img/photo/inne/biały domek po.jpg" alt=""></picture>
+                    <picture class="why-us__jpg why-us__jpg--ninth" data-name="images-left" ><img
+                            src="./src/img/photo/inne/biały domek po (2).jpg" alt=""></picture>
                 </section>
             </section>
 
