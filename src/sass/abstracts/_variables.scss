@@ -2,7 +2,7 @@
 @use '../abstracts/media' as *;
 
 :root{
---width-container:clamp(40em, 100vw, 130em);;
+--width-container:clamp(75em, 100vw, 130em);;
 --elements-displayed:2;
 // --all-elements: 14;
 --elements-width: calc(var(--width-container) / var(--elements-displayed));
