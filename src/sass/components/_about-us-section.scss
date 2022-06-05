@@ -6,11 +6,17 @@
     display: grid;
     justify-items: center;
     grid-auto-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr ;
+    grid-template-rows: 1fr;
     grid-template-areas:
+        "svg svg"
+        "text text";
+    padding:2rem 0;
+    @include breakpoint-min(sm){
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
         "text svg"
         "text svg";
-    padding:2rem 0;
+    }
     &__header{
     display: grid;
     align-content: space-evenly;

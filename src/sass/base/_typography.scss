@@ -17,24 +17,20 @@ input {
     font-family: $font-family-text;
 }
 
-.video-section__tittle{
-     font-size: clamp(em(32), 5vw, em(64));
-}
-.video-section__text{
-    font-size: clamp(em(16), 2.3vw, em(24));
-}
+
 h2{
     font-size: clamp(rem(24), 3vw, rem(30));
 }
 
 
 h3{
-    font-size: clamp(rem(22), 3vw, rem(26));
+    font-size: clamp(rem(19), 2.4vw, rem(22));
 }
 
 p{
-font-size: clamp(rem(16.5), 2.1vw, rem(21));
+font-size: clamp(rem(17.5), 2.1vw, rem(21));
 padding: rem(16);
+text-align: center;
 }
 
 
@@ -43,8 +39,22 @@ a{
     font-weight: bold;
     text-transform: uppercase;
 }
-
+.header__title>a{
+    font-size: clamp(rem(18), 3.5vw, rem(38));
+}
 
 .fa-arrow-down{
     font-size: rem(15);
+}
+
+.video-section__tittle{
+     font-size: clamp(em(32), 5vw, em(64));
+}
+.video-section__text{
+    font-size: clamp(em(16), 2.3vw, em(24));
+    text-align: start;
+}
+.services__list{
+    font-size: clamp(rem(16), 2.1vw, rem(20));
+    text-transform: uppercase;
 }

@@ -11,6 +11,7 @@ $breakpoints: (
   'landscape' : landscape,
 );
 
+
 @mixin breakpoint-min($size) {
     @media (min-width: map-get($breakpoints, $size)) {
         @content;
@@ -19,7 +20,7 @@ $breakpoints: (
 };
 
 @mixin breakpoint-max($size) {
-    @media (max-width: map-get($breakpoints, $size)) {
+    @media (max-width: map-get($breakpoints,  $size)) {
         @content;
     }
     

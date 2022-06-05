@@ -114,3 +114,13 @@ transform: translate3d(-300px, 0px, 0px);
 @mixin grid-column-1-2{
     grid-column: 1/span 2;
 }
+
+
+.svg-icon{
+    max-width: 100%;
+    max-height: 100%;
+&>path {
+    stroke-width: 8;
+    stroke:black;
+}
+}

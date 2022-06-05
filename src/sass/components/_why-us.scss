@@ -16,7 +16,6 @@
         justify-content: center;
         align-content: center;
         gap: rem(10);
-        margin: rem(16);
         padding: rem(32);
         background-color:$color-fake-jade;
             @include breakpoint-min(lg){
@@ -41,13 +40,19 @@
     }
    
     &__jpg{
+        text-align: center;
         object-fit: cover;
         transition:opacity .5s ease-in-out, transform 1.5s ease-in-out;
         opacity: 0;
-        max-width: 100%;
+        
         &>img {
        max-width: 100%;
        height: auto;
+       cursor: pointer;
+       transition: $scale-transform;
+       &:hover{
+           transform: $scale;
+       }
         }
         @include breakpoint-min(md){
             &--second{
@@ -69,11 +74,6 @@
 
             &--first,&--third,&--sixth{
                 @include grid-column-1;
-            }
-            &--first,&--third{
-                @include breakpoint-min(xl){
-                @include grid-column-1-2;
-                }
             }
             &--sixth{
                 grid-column: 2;

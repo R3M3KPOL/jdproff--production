@@ -56,7 +56,6 @@
     cursor: pointer;
     &>a{
         color: $color-black;
-        font-size: clamp(rem(18), 3.5vw, rem(38));
     }
 
      @include breakpoint-max(md){
@@ -201,7 +200,7 @@
             left: auto;
             height: auto;
             transform: translateX(0);
-            box-shadow:0px 2px 0px $color-box-shadow;
+            box-shadow:0px 2px 0px $color-sea-glass;
             border-radius:0 0 rem(10) rem(10);
             opacity: 0;
             visibility: hidden;

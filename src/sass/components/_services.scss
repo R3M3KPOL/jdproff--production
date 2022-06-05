@@ -1,0 +1,47 @@
+@use '../utils/functions'as *;
+@use '../abstracts' as *;
+
+.services {
+    &__cards {
+        display: grid;
+        // grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        justify-items: center;
+        gap: 5vw;
+    }
+    &__card {
+        display: inherit;    
+        gap: rem(16);
+        grid-column: 1;
+        padding: rem(32) rem(10);
+        background-color: $color-sea-glass;
+        border-radius: rem(10);
+        clip-path: $clip-path;
+        transition: background-color .2s ease-in-out;
+        max-width: 70vw;
+        width: 100%;
+
+        @include breakpoint-min(lg){
+            grid-column: auto;
+            margin: rem(40) 0;
+            padding: rem(32);
+        }
+        &:hover{
+        background-color: $bgc-light-grey;
+        }
+        height: 100%;
+        background-image: url(/src/img/photo/inne/jdproff_logo\ \(5\).webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+}
+.svg-icon{
+    align-self: end;
+}
+.svg-icon>path{
+    fill: #e3e3e3;
+    stroke: transparent;
+}
