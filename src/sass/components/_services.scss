@@ -4,11 +4,13 @@
 .services {
     &__cards {
         display: grid;
-        // grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
         justify-items: center;
         gap: 5vw;
+        @include breakpoint-min(lg){
+            grid-template-rows: auto;
+        }
     }
     &__card {
         display: inherit;    

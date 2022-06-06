@@ -11,20 +11,20 @@
         "svg svg"
         "text text";
     padding:2rem 0;
-    @include breakpoint-min(sm){
+    @include breakpoint-min(md){
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
         "text svg"
         "text svg";
     }
     &__header{
-    display: grid;
-    align-content: space-evenly;
-    grid-area: text;
+        display: grid;
+        align-content: space-evenly;
+        grid-area: text;
     }
     &__image-svg{
-    grid-area: svg;
-    width: clamp(10em, 22vw, 20em);
-    animation: logo-JDPROFF 12s ease-in-out infinite;
+        grid-area: svg;
+        width: clamp(10em, 22vw, 20em);
+        animation: logo-JDPROFF 12s ease-in-out infinite;
     }
 }

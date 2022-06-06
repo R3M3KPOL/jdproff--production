@@ -44,7 +44,6 @@
         object-fit: cover;
         transition:opacity .5s ease-in-out, transform 1.5s ease-in-out;
         opacity: 0;
-        
         &>img {
        max-width: 100%;
        height: auto;
@@ -53,7 +52,7 @@
        &:hover{
            transform: $scale;
        }
-        }
+    }
         @include breakpoint-min(md){
             &--second{
                 transform: translate3d(0,0,0);

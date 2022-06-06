@@ -4,8 +4,23 @@
 
 h1,
 h2,
-h3 {
-    font-family: $font-family-title;
+h3,
+p,
+a,
+li,
+span,
+label,
+input {
+    font-family: $font-family-poppins;
+}
+
+h2{
+  font-size: clamp(rem(24), 3vw, rem(30));
+  font-weight: $poppins-500;
+}
+h3{ 
+    font-size: clamp(rem(19), 2.4vw, rem(24));
+    font-weight: $poppins-500;
 }
 
 p,
@@ -14,17 +29,7 @@ li,
 span,
 label,
 input {
-    font-family: $font-family-text;
-}
-
-
-h2{
-    font-size: clamp(rem(24), 3vw, rem(30));
-}
-
-
-h3{
-    font-size: clamp(rem(19), 2.4vw, rem(22));
+font-weight: $poppins-200;
 }
 
 p{
@@ -36,10 +41,11 @@ text-align: center;
 
 a{  
     font-size: clamp(rem(13), 1vw, rem(17));
-    font-weight: bold;
+    font-weight: $poppins-500;
     text-transform: uppercase;
 }
 .header__title>a{
+    font-weight: $poppins-700;
     font-size: clamp(rem(18), 3.5vw, rem(38));
 }
 
@@ -53,6 +59,9 @@ a{
 .video-section__text{
     font-size: clamp(em(16), 2.3vw, em(24));
     text-align: start;
+}
+.video-section__text--more{
+    font-size: clamp(rem(10), 1.2vw, rem(16));
 }
 .services__list{
     font-size: clamp(rem(16), 2.1vw, rem(20));

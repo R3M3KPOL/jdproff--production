@@ -72,93 +72,90 @@
 
 //learn more - video button
 .video-section{
-&__more{
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: clamp(8.2rem, 15vw, 12rem);
-    border-radius: rem(22);
-    background-color:$color-fake-jade;
-    transition: background .6s cubic-bezier(0.65,0,.076,1);
-    cursor: pointer;
-    &:hover{
-        background: transparent;
-     .video-section__circle{
-        width: 100%;
+    &__more{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: clamp(8.2rem, 15vw, 12rem);
+        border-radius: rem(22);
+        background-color:$color-fake-jade;
+        transition: background .6s cubic-bezier(0.65,0,.076,1);
+        cursor: pointer;
+        &:hover{
+            background: transparent;
+        .video-section__circle{
+            width: 100%;
+        }
+        .video-section__text--more{
+            color: $color-white;
+            transform: translateX(rem(12));
+        }
+        .video-section__arrow{
+            transform: translate(rem(12), 0);
+        }
+        .video-section__arrow::after{
+            background-color:$color-white;
+        }
+        }  
     }
-    .video-section__text--more{
-        color: $color-white;
-        transform: translateX(rem(12));
-    }
-    .video-section__arrow{
-        transform: translate(rem(12), 0);
-    }
-    .video-section__arrow::after{
-        background-color:$color-white;
-    }
-    }  
-}
-&__circle{
-    position: relative;
-    display: block;
-    width: em(25);
-    height: rem(25);
-    border-radius: rem(22);
-    background-color:$bgc-dark; 
-    transition: width .4s cubic-bezier(0.65,0,.076,1);
-    z-index: 5;
-    @include breakpoint-min(lg){
-        width: em(28);
-        height: em(28);
-    }
-}
-    &__arrow{
-        position: absolute;
+    &__circle{
+        position: relative;
         display: block;
+        width: em(25);
+        height: rem(25);
+        border-radius: rem(22);
+        background-color:$bgc-dark; 
+        transition: width .4s cubic-bezier(0.65,0,.076,1);
+        z-index: 5;
+        @include breakpoint-min(lg){
+            width: em(28);
+            height: em(28);
+        }
+    }
+        &__arrow{
+            position: absolute;
+            display: block;
             left: 0.625rem;
             width: 1.125rem;
             height: 0.125rem;
             background: none;
             transition: transform .4s cubic-bezier(0.65,0,.076,1);
-              &::before {
-                position: absolute;
-                content: '';
-                top: 0.55rem;
-                right: 0.725rem;
-                width: 0.625rem;
-                height: 0.625rem;
-                border-top: 0.125rem solid $color-white;
-                border-right: 0.125rem solid $color-white;
-                transform: rotate(45deg);
-            }
-             &::after{
-            position: absolute;
-            content: '';
-            left: -0.55rem;
-            top: 0.8rem;
-            width: 0.84rem;
-            height: 0.125rem;
-            background: none;
-            transition: background-color .4s cubic-bezier(0.65,0,.076,1);
-          
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 0.55rem;
+                    right: 0.725rem;
+                    width: 0.625rem;
+                    height: 0.625rem;
+                    border-top: 0.125rem solid $color-white;
+                    border-right: 0.125rem solid $color-white;
+                    transform: rotate(45deg);
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: -0.55rem;
+                    top: 0.8rem;
+                    width: 0.84rem;
+                    height: 0.125rem;
+                    background: none;
+                    transition: background-color .4s cubic-bezier(0.65,0,.076,1);
+                }
         }
+    &__box-text{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-&__box-text{
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-&__text--more{
-    font-size: clamp(rem(9), 1.2vw, rem(16));
-    z-index: 10;
-    color: $bgc-dark;
-    text-shadow: none;
-    transition: color .4s cubic-bezier(0.65,0,.076,1), transform .4s cubic-bezier(0.65,0,.076,1);
-} 
-
+    &__text--more{
+        z-index: 10;
+        color: $bgc-dark;
+        text-shadow: none;
+        transition: color .4s cubic-bezier(0.65,0,.076,1), transform .4s cubic-bezier(0.65,0,.076,1);
+    } 
 }
