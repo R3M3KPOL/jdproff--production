@@ -1,5 +1,6 @@
 const figures = document.querySelectorAll('.slider-gallery__photo');
-let images = document.querySelectorAll('picture')
+let images = document.querySelectorAll('picture');
+const elementsOfSteps = document.querySelectorAll('.steps__heading');
 let imagesArr = [...images]
 
 
@@ -10,27 +11,21 @@ const filterItems = (el, index) => {
 
 
 
-const options = [
-    {
+const options = {    
     root: null,
-    threshold:0.20,
-    rootMargin: '0px',
-    },
-
-    {
-     root: null,
-    threshold:[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-    rootMargin:'20px',
-    }
-];
+    threshold:0.55,
+    rootMargin: '0px'
+   
+};
 
 
 
-const loadingImages = (eltries, observer)=>{
-    const [entry] = eltries;
+const loadingImages = (entries, observer)=>{
+    const [entry] = entries;
     if(!entry.isIntersecting)return;
-
+    // console.log(entry.target.dataset)
     entry.target.name = entry.target.dataset.name
+    entry.target.tabContent = entry.target.dataset.tabContent
     if(entry.target.name === 'images-right'){
     entry.target.classList.toggle('fade-right')
     }
@@ -42,11 +37,19 @@ const loadingImages = (eltries, observer)=>{
     }
     if(entry.target.name === 'images'){
         entry.target.classList.toggle('fade')
-    }       
+    }
+    if(entry.target.tabContent === 'steps'){
+        entry.target.querySelector('.steps__content').classList.toggle('fade-bounce-in')
+        entry.target.querySelector('.steps__svg').classList.toggle('fade-bounce-in')
+    }
 observer.unobserve(entry.target)
 }
-const observer = new IntersectionObserver(loadingImages, options[1])
+const observer = new IntersectionObserver(loadingImages, options)
 
 imagesArr.forEach(image => {
     observer.observe(image)
+})
+
+elementsOfSteps.forEach(element => {
+    observer.observe(element)
 })

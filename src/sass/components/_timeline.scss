@@ -4,13 +4,12 @@
 .steps{
     margin: 0 auto;
     &__timeline{
-        background-color: tomato;
         display: grid;
         justify-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+        grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+        gap: rem(90) 0;
         position: relative;
-        max-width: em(900);
         &::before{
             content: "";
             position: absolute;
@@ -19,28 +18,161 @@
             bottom: 0px;
             transform: translateX(-50%);
             width: 4px;
-            background-color:skyblue;
+            background-color:$bgc-light-grey;
             z-index: 1;
+        }
+
+        @include breakpoint-min(md){
+            gap:rem(180) 0;
         }
     }
     &__heading{
-        z-index: 2;
-        background-color: transparent;
-        text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: rem(48);
+         z-index: 2;
         &:nth-of-type(1){
-            grid-area: 1/1
+            grid-area: 1/2;
+            justify-content: flex-end;
         }
         &:nth-of-type(2){
-            grid-area: 1/3
+            grid-area: 2/2;
         }
         &:nth-of-type(3){
-            grid-area: 2/1
+            grid-area: 3/2;
+            justify-content: flex-end;
         }
         &:nth-of-type(4){
-            grid-area: 2/3
+            grid-area: 4/2;
         }
-        &:nth-of-type(5){
-            grid-area: 3/2
+        &:nth-last-child(1){
+            grid-area: 5/1/5/4;
+            width: 50%;
+            align-items: center;
+        }
+        @include breakpoint-min(md){
+            gap: rem(12);
+            align-items: baseline;
+            &:nth-of-type(1),&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4){
+            flex-direction: row;
+            }
+            &:nth-of-type(1){
+            grid-area: 1/1/1/3;
+            }
+        &:nth-of-type(2){
+            grid-area: 2/2/2/4;
+            }
+        &:nth-of-type(3){
+            grid-area: 3/1/3/3;
+            }
+        &:nth-of-type(4){
+            grid-area: 4/2/4/4;
+            }
+        }
+
+        &--right{
+            &>.steps__content{
+                align-items: center;
+                order: 1;
+                @include breakpoint-min(md){
+                    align-items: flex-end;
+                    order: 0;
+                    margin-right: rem(25);
+                }
+            }
+        }
+        &--left{
+            &>.steps__content{
+                align-items: center;
+                order: 1;
+                @include breakpoint-min(md){
+                    align-items: flex-start;
+                    margin-left:rem(25);
+                }
+            }
+        }
+        &--last{
+            flex-direction: column;
+            &>.steps__content{
+                order: 1;
+                align-items: center;
+                margin-top: rem(25);
+            }
         }
     }
+    &__content{
+         display: flex;
+        flex-direction: column;
+        position: relative;
+        width: clamp(13em, 33vw, 65em);;
+        padding: rem(32) rem(16);
+        background-color: $bgc-white;
+        border-radius: 5%;
+        box-shadow: 3px 3px 0px 0px $color-channel-marker-green;
+        transform: scale(0.0001);
+        opacity: 0;
+        &--right{
+            @include transform3d-X(right)
+        }
+        &--left{
+            @include transform3d-X(left)
+        }
+
+        @include breakpoint-min(md){
+            &--right::after{
+                @include pseudoElements(true, false)
+            }
+            &--left::before{
+            @include pseudoElements(false, true)
+            }
+            &--last::after{
+                @include pseudoElements(false, false)
+            }
+        }
+    }
+    &__text-paragraf{
+        padding: rem(16) 0;
+        &--right{
+            &>a{
+                font-size: inherit;
+                color: inherit;
+                transition: color .4s cubic-bezier(.08,.8,.53,1.03);
+                &:hover{
+                    color: $color-channel-marker-green;
+                }
+            }
+        }
+        @include breakpoint-min(md){
+            &--left{
+                text-align: start;
+            }
+            &--right{
+                text-align: end;
+            }
+        }
+    }
+    &__svg{
+        text-align: center;
+        height: 50px;
+        width: 50px;
+        background-color:$color-sea-glass;
+        opacity: 0;
+        &--right{
+            @include transform3d-X(left)
+        }
+        &--left{
+            @include transform3d-X(right)
+        }
+
+        &>svg{
+            height: 100%;
+        &>path{
+            fill: $bgc-white;
+        }
+        }
+        
+    }
 }
+
+@include fades(false,true)

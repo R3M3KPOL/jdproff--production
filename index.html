@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
 
 
 
@@ -347,11 +347,20 @@ podejmujemy się długoterminowych prac wyjazdowych.">
             <section class="steps  wrapper-style">
                 <h2 data-text="Hvordan samarbeidet med oss ​​ser ut" class="steps__text  title-heading">Hvordan
                     samarbeidet med oss ​​ser ut</h2>
-                <div class="steps__timeline">
-                    <header class="steps__heading">
-                        <a href="#0" data-tab-target="#one"
-                            class="steps__timeline-icon steps__timeline-icon--active"><svg class="svg-icon" width="36"
-                                height="36" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ul class="steps__timeline">
+                    <li data-tab-content="steps" class="steps__heading steps__heading--right">
+                        <div class="steps__content steps__content--right">
+                            <span class="steps__subtitle ">Steg første</span>
+                            <h3>Kontakt oss</h3>
+                            <p class="steps__text-paragraf steps__text-paragraf--right">Kontakt oss via søknadsskjemaet
+                                nederst på siden
+                                eller
+                                ring <a href="tel:966 82 586">966 82 586</a>.
+                            </p>
+                        </div>
+                        <div class="steps__svg steps__svg--right">
+                            <svg class="svg-icon" width="36" height="36" viewBox="0 0 512 512" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M508.2 387L485.95 487.8C482.684 502.05 470.16 505.02 455.49 505.02C203.2 505 3 308.8 3 56.5C3 41.84 12.969 29.3 27.22 26.05L125.02 2.80003C139.7 -0.601973 154.7 7.01803 160.8 20.92L207.32 129.42C212.758 142.2 209.09 157.09 198.34 165.87L144.5 207.1C178.48 276.32 232.76 332.6 302 366.6L346.08 312.8C354.768 302.02 369.77 298.29 382.55 303.825L490.05 350.335C503.1 357.2 511.6 372.4 508.2 387Z"
                                     stroke="#999999" stroke-width="10" />
@@ -361,77 +370,87 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                                     </clipPath>
                                 </defs>
                             </svg>
-                        </a>
-                        <h3 class="steps__subtitle ">Steg første</h3>
-                        <h4>Kontakt oss</h4>
-                        <p class=" steps__text-paragraf ">Kontakt oss via søknadsskjemaet nederst på siden
-                            eller
-                            ring 966 82 586.
-                        </p>
-                    </header>
-                    <header class="steps__heading">
-                        <a href="#0" data-tab-target="#two" class="steps__timeline-icon"><svg class="svg-icon"
-                                width="36" height="36" viewBox="0 0 640 512" fill="none"
+                        </div>
+                    </li>
+                    <li data-tab-content="steps" class="steps__heading steps__heading--left">
+                        <div class="steps__content steps__content--left">
+                            <span class="steps__subtitle">Steg andre</span>
+                            <h3>Ordne detaljene</h3>
+                            <p class="steps__text-paragraf steps__text-paragraf--left">Vi gjennomfører forskjellige
+                                prosjekter, så vi
+                                ønsker å
+                                se arbeidsplassen så snart som mulig og
+                                planlegge prosjektet i samsvar med klientens forventninger.</p>
+                        </div>
+                        <div class="steps__svg steps__svg--left">
+                            <svg class="svg-icon" width="36" height="36" viewBox="0 0 640 512" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M513 163C557.18 163 593 127.18 593 83C593 38.82 557.2 3 513 3C468.82 3 433 38.82 433 83C433 127.18 468.8 163 513 163ZM129 163C173.18 163 209 127.18 209 83C209 38.82 173.2 3 129 3C84.82 3 49 38.82 49 83C49 127.18 84.82 163 129 163ZM319.9 320C377.31 320 424 276.44 424 219C424 161.56 377.46 115 320.9 115C263.49 115 217.8 161.56 217.8 219C216.9 276.4 262.5 320 319.9 320ZM368 400C368 384.242 371.029 369.304 375.762 355.144C376.182 353.885 375.303 352.536 373.987 352.364C372.636 352.187 371.305 352 369.9 352H270.1C191.6 352 128 411.7 128 485.3C128 500.1 140.7 506 156.4 506H416.798C418.689 506 419.539 503.596 418.097 502.373C387.601 476.494 368 443.444 368 400ZM184.9 219C184.9 214.012 185.723 209.249 186.343 204.429C186.447 203.62 186.042 202.83 185.319 202.454C174.73 196.951 163.14 195 150.9 195H92.08C43.44 195 4 236.8 4 288.3C4 298.6 10.887 304 20.62 304H212.769C214.478 304 215.408 301.985 214.33 300.659C195.629 277.631 184.9 251.134 184.9 219ZM544.9 195H490.06C477.762 195 466.129 197.803 455.498 202.638C454.719 202.992 454.264 203.812 454.371 204.66C454.972 209.423 455.8 214.087 455.8 219C455.8 238.126 451.336 256.014 443.981 272.388C443.171 274.192 445.189 276.11 446.948 275.205C466.552 265.118 488.449 259 512 259C554.158 259 583.817 274.502 610 303.336C610.381 303.756 610.924 304 611.491 304H614.356C624.1 304 633 298.6 633 288.3C633 236.8 593.6 195 544.9 195ZM618.239 366.928C618.15 366.775 618.073 366.614 618.02 366.445C612.984 350.535 604.451 336.016 593.35 323.99C591.676 322.129 588.883 321.664 586.651 322.967L568.703 333.332C567.97 333.755 567.052 333.669 566.399 333.132C558.924 326.976 550.462 322.074 541.363 318.699C540.567 318.403 540.031 317.649 540.031 316.801V298.1C540.031 295.586 538.17 293.354 535.75 292.887C519.358 289.202 502.593 289.256 486.911 292.778C486.595 292.849 486.3 292.995 486.063 293.216C484.627 294.559 483.1 296.626 483.1 298.1V315.924C483.1 316.772 482.564 317.526 481.768 317.821C472.668 321.195 464.201 326.098 456.73 332.256C456.078 332.793 455.161 332.879 454.429 332.458L436.39 322.09C434.251 320.787 431.458 321.252 429.693 323.113C418.523 335.213 409.963 349.823 405.033 365.823C404.289 368.335 405.312 370.94 407.453 372.149L425.416 382.615C426.141 383.038 426.523 383.868 426.388 384.697C424.842 394.228 424.842 404.041 426.389 413.582C426.523 414.41 426.141 415.24 425.416 415.662L407.453 426.129C405.219 427.338 404.289 429.945 405.033 432.457C409.965 448.467 418.523 462.977 429.693 475.167C431.459 477.03 434.16 477.495 436.39 476.192L454.429 465.824C455.162 465.403 456.078 465.489 456.729 466.026C464.204 472.182 472.669 477.085 481.768 480.46C482.564 480.756 483.1 481.51 483.1 482.358V497.182C483.1 499.696 484.87 501.928 487.288 502.393C503.948 506.116 520.788 506.022 536.608 502.393C539.028 501.928 540.889 499.696 540.889 497.182V482.359C540.889 481.51 541.426 480.756 542.221 480.461C551.32 477.089 559.786 472.185 567.257 466.028C567.91 465.49 568.828 465.405 569.561 465.828L587.509 476.192C589.65 477.495 592.534 477.03 594.208 475.167C605.378 463.067 613.938 448.467 618.958 432.457C619.702 429.945 618.681 427.338 616.446 426.129L598.495 415.669C597.764 415.243 597.382 414.404 597.524 413.571C599.146 404.045 599.146 394.233 597.524 384.707C597.382 383.874 597.764 383.035 598.495 382.609L616.119 372.339C616.335 372.214 616.575 372.137 616.816 372.069C618.741 371.524 619.556 369.214 618.239 366.928ZM512 432C494.33 432 480 417.67 480 400C480 382.33 494.33 368 512 368C529.67 368 544 382.33 544 400C544 417.7 529.7 432 512 432Z"
                                     stroke="#999999" stroke-width="10" />
-                            </svg></a>
-                        <h3 class="steps__subtitle">Steg andre</h3>
-                        <h4>Ordne detaljene</h4>
-                        <p class="steps__text-paragraf">Vi gjennomfører forskjellige prosjekter, så vi
-                            ønsker å
-                            se arbeidsplassen så snart som mulig og
-                            planlegge prosjektet i samsvar med klientens forventninger.</p>
-                    </header>
-                    <header class="steps__heading">
-                        <a href="#0" data-tab-target="#three" class="steps__timeline-icon"><svg class="svg-icon"
-                                width="36" height="36" viewBox="0 0 640 512" fill="none"
+                            </svg>
+                        </div>
+                    </li>
+                    <li data-tab-content="steps" class="steps__heading steps__heading--right">
+                        <div class="steps__content steps__content--right">
+                            <span class="steps__subtitle">Steg tredje</span>
+                            <h3>Prisoversikt</h3>
+                            <p class="steps__text-paragraf steps__text-paragraf--right">Prisen avhenger av
+                                forventningene
+                                og
+                                materialvalget
+                                og
+                                blir etablert individuelt etter konsultasjon
+                                med klienten.</p>
+                        </div>
+                        <div class="steps__svg steps__svg--right">
+                            <svg class="svg-icon" width="36" height="36" viewBox="0 0 640 512" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M416 176C416 78.8 325.9 3 211 3C96.1 3 3.00002 81.8 3.00002 179C3.00002 218.57 18.62 254.96 44.67 284.4C28.28 317.16 5.44002 341.72 5.08002 342.08C2.98002 344.285 2.41002 347.555 3.63902 350.434C4.90002 353.3 4.60202 352 7.66002 352C46.01 352 81.42 343.88 106.4 330.96C137.2 346.1 169.8 352 208 352C322.9 352 416 273.2 416 176ZM272.8 221.3C269.2 242.2 253.4 255.1 231 260.7V271C231 282.03 222.047 291 211 291C199.953 291 191 282.031 191 271V260.2C182.318 258.278 173.7 255.477 165.94 252.688L161.674 251.188C151.3 247.5 145.8 236.1 149.5 225.7C153.188 215.29 164.61 209.89 175.02 213.48L179.489 215.105C187.333 217.917 196.209 221.105 203.149 222.136C216.8 224.3 232 222.3 233.4 214.5C234.3 209.4 234.8 206.6 205.5 198.2L199.7 196.5C182.37 191.406 141.78 179.5 149.18 136.66C152.8 115.8 168.6 101.76 191 96.99V87C191 75.97 199.953 67 211 67C222.047 67 231 75.969 231 87V97.63C236.453 98.825 242.34 100.419 249.56 102.903C260 106.5 265.5 117.9 261.9 128.4C258.3 138.8 246.8 144.3 236.4 140.7C230.541 138.669 224.4 136.7 218.81 135.856C205.2 133.8 189.1 135.7 188.6 143.5C187.8 147.1 187.3 151.2 210.1 158.2L216.5 159.8C238.8 166.1 280.3 178 272.8 221.3ZM594.6 438.7C619.8 408.9 635 371.6 635 331C635 233.8 554 160 448 160C447.686 160 447.381 160.041 447.066 160.043C447.5 165.3 448 170.6 448 176C448 274.62 368.32 357.2 261.9 378.5C282.7 455.1 352.1 507 443 507C476.69 507 508.32 498.992 535.85 485.02C560.2 497 591.1 507 627.3 507C630.359 507 633.06 505.275 634.32 502.395C635.549 499.516 634.978 496.247 632.879 494.041C632.6 493.7 610.9 470.3 594.6 438.7Z"
                                     stroke="#999999" stroke-width="10" />
-                            </svg></a>
-                        <h3 class="steps__subtitle">Steg tredje</h3>
-                        <h4>Prisoversikt</h4>
-                        <p class="steps__text-paragraf">Prisen avhenger av forventningene og materialvalget
-                            og
-                            blir etablert individuelt etter konsultasjon
-                            med klienten.</p>
-                    </header>
-                    <header class="steps__heading">
-                        <a href="#0" data-tab-target="#four" class="steps__timeline-icon"><svg class="svg-icon"
-                                width="36" height="36" viewBox="0 0 518 518" fill="none"
+                            </svg>
+                        </div>
+                    </li>
+                    <li data-tab-content="steps" class="steps__heading steps__heading--left">
+                        <div class="steps__content steps__content--left">
+                            <span class="steps__subtitle">Steg fjerde</span>
+                            <h3>Utførelse</h3>
+                            <p class="steps__text-paragraf steps__text-paragraf--left">Vi fokuserer på profesjonalitet,
+                                nøyaktighet og
+                                pålitelighet i gjennomføringen av våre bestillinger.
+                                Etter planlegging av prosjektet prøver vi å starte arbeidet så snart som mulig,
+                                så
+                                kan vi fullføre det på
+                                kortest mulig tid.</p>
+                        </div>
+                        <div class="steps__svg steps__svg--left">
+                            <svg class="svg-icon" width="36" height="36" viewBox="0 0 518 518" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M334.8 227.102C363.09 227.102 389.68 238.092 409.66 258.072L429.25 277.662C469.26 259.922 500.5 224.362 510.87 181.012C516.595 157.092 516.21 133.932 511.085 112.612C508.472 101.732 494.655 98.1015 486.745 106.008L417.845 174.908H342.245V100.202L411.145 31.3015C419.057 23.3895 415.42 9.57153 404.541 6.96153C383.221 1.83653 360.061 1.45153 336.141 7.17633C280.841 20.4063 237.751 67.3963 228.941 123.576C227.5 131.902 227.2 140.002 227.3 148.002L310.08 230.862C318.2 228.102 326.5 227.102 334.8 227.102ZM387 281.602C363.84 258.442 329.43 254.032 301.61 267.702L194.1 161.002V98.9915L67 3.00153L3 66.1015L99 193.202L161.04 193.209L267.74 299.809C254.07 327.629 258.489 362.039 281.65 385.199L398.65 502.299C413.27 516.799 436.86 516.799 451.36 502.298L504.11 449.548C518.61 435.048 518.61 411.468 504.108 396.838L387 281.602ZM230.9 310.002L171.7 250.902L22.8 399.802C-3.57 426.172 -3.57 468.882 22.8 495.252C35.96 508.402 53.21 515.002 70.5 515.002C87.79 515.002 105.04 508.41 118.22 495.222L237.32 376.122C228.5 355.302 225.6 332.402 230.9 310.002ZM67 475.002C53.75 475.002 43 464.252 43 451.002C43 437.742 53.75 427.002 67 427.002C80.25 427.002 91 437.702 91 451.002C91 464.302 80.25 475.002 67 475.002Z"
                                     stroke="#999999" stroke-width="10" />
-                            </svg></a>
-                        <h3 class="steps__subtitle">Steg fjerde</h3>
-                        <h4>Utførelse</h4>
-                        <p class="steps__text-paragraf">Vi fokuserer på profesjonalitet, nøyaktighet og
-                            pålitelighet i gjennomføringen av våre bestillinger.
-                            Etter planlegging av prosjektet prøver vi å starte arbeidet så snart som mulig,
-                            så
-                            kan vi fullføre det på
-                            kortest mulig tid.</p>
-                    </header>
-                    <header class="steps__heading">
-                        <a href="#0" data-tab-target="#five" class="steps__timeline-icon"><svg class="svg-icon"
-                                width="36" height="36" viewBox="0 0 512 512" fill="none"
+                            </svg>
+                        </div>
+                    </li>
+                    <li data-tab-content="steps" class="steps__heading steps__heading--last">
+                        <div class="steps__content steps__content--last">
+                            <span class="steps__subtitle">Steg femte</span>
+                            <h3>Kundesmil</h3>
+                            <p class="steps__text-paragraf">Vi håper at kundene våre skal være fornøyd med
+                                samarbeidet med oss og setter pris på vårt
+                                engasjement og profesjonalitet.</p>
+                        </div>
+                        <div class="steps__svg">
+                            <svg class="svg-icon" width="36" height="36" viewBox="0 0 512 512" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M10 256C10 114.6 114.6 10 256 10C397.4 10 502 114.6 502 256C502 397.4 397.4 502 256 502C114.6 502 10 397.4 10 256ZM164.1 325.5C158.3 318.8 148.2 318.1 141.5 323.9C134.8 329.7 134.1 339.8 139.9 346.5C162.1 372.1 200.9 400 255.1 400C311.1 400 349.8 372.1 372.1 346.5C377.9 339.8 377.2 329.7 370.5 323.9C363.8 318.1 353.7 318.8 347.9 325.5C329.9 346.2 299.4 368 255.1 368C212.6 368 182 346.2 164.1 325.5ZM176.4 176C158.7 176 144.4 190.3 144.4 208C144.4 225.7 158.7 240 176.4 240C194 240 208.4 225.7 208.4 208C208.4 190.3 194 176 176.4 176ZM300.8 233.6C318.4 210.1 353.6 210.1 371.2 233.6C376.5 240.7 386.5 242.1 393.6 236.8C400.7 231.5 402.1 221.5 396.8 214.4C366.4 173.9 305.6 173.9 275.2 214.4C269.9 221.5 271.3 231.5 278.4 236.8C285.5 242.1 295.5 240.7 300.8 233.6Z"
                                     stroke="#999999" stroke-width="10" />
                             </svg>
-                        </a>
-                        <h3 class="steps__subtitle">Steg femte</h3>
-                        <h4>Kundesmil</h4>
-                        <p class="steps__text-paragraf">Vi håper at kundene våre skal være fornøyd med
-                            samarbeidet med oss og setter pris på vårt
-                            engasjement og profesjonalitet.</p>
-                    </header>
-                </div>
+                        </div>
+                    </li>
+                </ul>
                 <!-- <div class="steps__timeline-item">
                             <div class="steps__container-word">
                                 <div class="steps__word steps__word--active" id="one" data-tab-content>
@@ -675,8 +694,8 @@ podejmujemy się długoterminowych prac wyjazdowych.">
         </div>
     </footer>
     </div>
-    <script src="js/parallax.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/parallax.js"></script>
 </body>
 
 </html>

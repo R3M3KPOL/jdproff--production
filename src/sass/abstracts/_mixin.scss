@@ -35,7 +35,6 @@
 .title-heading{
     position: relative;
     text-align: center;
-    // width: clamp(9rem, 18vw, 20rem);
     width: fit-content;
     margin: rem(16) auto;
     padding: rem(16);
@@ -80,27 +79,46 @@
 
     }
 
-@mixin fades {
-    .fade{
-    opacity: 1;
-    }
-
-    .fade-right{
+@mixin fades ($parralax, $timeline) {
+    @if($parralax){
+            .fade{
         opacity: 1;
-        transform: translate3d(0%,0,0);
+        }
+        .fade-right{
+            opacity: 1;
+            transform: translate3d(0%,0,0);
+        }
+        .fade-left{
+            opacity: 1;
+            transform: translate3d(0%,0,0);
+        }
+        .fade-bottom{
+            opacity: 1;
+            transform: translate3d(0,-25%,0);
+        }
     }
-    .fade-left{
-        opacity: 1;
-        transform: translate3d(0%,0,0);
-    }
-    .fade-bottom{
-        opacity: 1;
-        transform: translate3d(0,-25%,0);
+    @if else($timeline){
+        .fade-bounce-in{
+            transition: opacity .5s ease-in-out, transform .5s cubic-bezier(.32,.98,.3,1.25);
+            opacity: 1;
+            transform: scale(1) translate3d(0,0,0);
+        }
+        
     }
 }
 
 @mixin transform3d-X-for-left{
 transform: translate3d(-300px, 0px, 0px);
+}
+
+@mixin transform3d-X($direction){
+    @if($direction == right){
+        transform:translate3d(-100px ,0 ,0);
+    }
+    @else if($direction == left){
+        transform:translate3d(100px ,0 ,0);
+    }
+
 }
 
 @mixin grid-row-2{
@@ -120,8 +138,42 @@ transform: translate3d(-300px, 0px, 0px);
 .svg-icon{
     max-width: 100%;
     max-height: 100%;
-&>path {
-    stroke-width: 8;
-    stroke:black;
+    &>path {
+        stroke-width: 8;
+        stroke:black;
+    }
 }
+
+
+@mixin baseForPseudoElements($left,$right){
+    content: '';
+    position: absolute;
+    top:rem(16);
+    border:solid transparent;
+    border-right:solid $color-sea-glass;
+    border-width: $border-triangle;
+    @if($left == true){
+        right: $border-position;
+        transform: rotateZ(180deg);
+    }
+    @else if($right == true){
+        left: $border-position;
+        transform: rotateZ(360deg);
+    }
+    @else{
+        top:rem(-16);
+        transform: rotateZ(90deg);
+    }
+}
+
+@mixin pseudoElements($arg1, $arg2) {
+    @if($arg1 == true){
+        @include baseForPseudoElements(true, false);
+    }
+    @else if ($arg2 == true){
+        @include baseForPseudoElements(false,true);
+    }
+    @else{
+        @include baseForPseudoElements(false,false);
+    }
 }
