@@ -109,14 +109,16 @@
         padding: rem(32) rem(16);
         background-color: $bgc-white;
         border-radius: 5%;
-        box-shadow: 3px 3px 0px 0px $color-channel-marker-green;
+        box-shadow: 0px 3px 0px 2px $color-channel-marker-green;
         transform: scale(0.0001);
         opacity: 0;
         &--right{
-            @include transform3d-X(right)
+            @include transform3d-X(right);
+            box-shadow: 3px 3px 0px 0px $color-channel-marker-green;
         }
         &--left{
-            @include transform3d-X(left)
+            @include transform3d-X(left);
+            box-shadow:-3px 3px 0px 0px $color-channel-marker-green;
         }
 
         @include breakpoint-min(md){
