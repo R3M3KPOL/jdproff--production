@@ -5,12 +5,14 @@
 h1,
 h2,
 h3,
+h4,
 p,
 a,
 li,
 span,
 label,
-input {
+input,
+cite  {
     font-family: $font-family-poppins;
 }
 
@@ -22,25 +24,31 @@ h3{
     font-size: clamp(rem(19), 2.4vw, rem(24));
     font-weight: $poppins-500;
 }
-
+h4{ 
+    font-size: clamp(rem(14), 2.4vw, rem(16));
+    font-weight: $poppins-500;
+}
 p,
-a,
 li,
 span,
 label,
-input {
+input,
+cite {
 font-weight: $poppins-200;
 }
 
+p,.services__list{
+font-size: clamp(rem(16.5), 2vw, rem(20)); 
+}
+
 p{
-font-size: clamp(rem(16.5), 2vw, rem(21));
 padding: rem(16);
 text-align: center;
 }
 
 
 a{  
-    font-size: clamp(rem(13), 1.3vw, rem(18));
+    font-size: clamp(rem(13), 1.5vw, rem(16));
     font-weight: $poppins-500;
     text-transform: uppercase;
 }
@@ -64,10 +72,34 @@ a{
     font-size: clamp(rem(10), 1.2vw, rem(16));
 }
 .services__list{
-    font-size: clamp(rem(16), 2.1vw, rem(20));
     text-transform: uppercase;
 }
-.steps__subtitle{
+.steps__subtitle,.reviews__block-comment>span{
     font-size: clamp(rem(16), 2.4vw, rem(20));
     font-weight: $poppins-400;
+}
+.reviews__block-comment>p{
+    font-style:italic;
+    text-align: start;
+    padding: rem(16) 0;
+}
+
+.reviews__person{
+    font-size: clamp(rem(13), 1.8vw, rem(16));
+}
+
+.contact__form-label,.contact__form-btn{
+    font-size: clamp(rem(13), 1.8vw, rem(16));
+    font-weight: $poppins-400;
+}
+.footer__title>a{
+    font-size: inherit;
+}
+.footer__createdby{
+    font-size: clamp(rem(12), 2.3vw, rem(14));
+    font-weight: $poppins-400;
+    text-align: start;
+}
+.footer__list-item>a{
+    font-size: clamp(rem(10), 2.3vw, rem(12));
 }

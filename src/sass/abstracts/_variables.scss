@@ -37,7 +37,8 @@ $bgc-light-grey:#f3f3f3;
 $bgc-white:#ffff;
 //colors
 $color-white:#f5f5f5;
-$color-black:#004759;
+$color-crab-nebula:#004759;
+$color-black:#252525;
 $color-channel-marker-green:#05d1b6;
 $color-fake-jade:#cbf5ef;
 
@@ -48,18 +49,28 @@ $color-black-stroke:#252525;
 //another animations
 $border:#04af9827;
 $border-line-bottom:#dbdbdb;
+$color-grey:#dbdbdb;
+$color-second-grey:#b9b9b9;
 $color-sea-glass:#72d7c9;
-$border-position: rem(-35);
-$border-triangle:rem(14);
-
+$color-pale-kings-blue:#51a79b;
 
 $sm-facebook:#1877F2;
 $sm-email:#2b2b2b;
 $sm-instagram:#E4405F;
+
+$sm-facebook-bg:#c6defd7c;
+$sm-instagram-bg:#fca6b67e;
+$sm-email-bg:#c2c0c07e;
+$box-shadow-property: 0px 5px 10px $bgc-button;
+$box-shadow-property-footer: none;
+$scale-property: scale(1.1);
+
 $linear-gradient-subMenu:linear-gradient(340deg, #09c6ac, #3dc3b0, #72d7c9, #acf3e9, #cbf5ef, #fbfbfb, #f8f8f8, #f8f9fa, #fafafb, #fcfcfd, #fdfdfe, #ffffff);
 
 
 
+$border-position: rem(-35);
+$border-triangle:rem(14);
 $scale: scale(1.05);
 $scale-transform:transform .2s cubic-bezier(0.39, 0.575, 0.565, 1);
 $padding:rem(0) rem(24);

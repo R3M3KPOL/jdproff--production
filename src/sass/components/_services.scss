@@ -6,6 +6,8 @@
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        max-width: 85em;
+        margin: auto;
         justify-items: center;
         gap: 5vw;
         @include breakpoint-min(lg){

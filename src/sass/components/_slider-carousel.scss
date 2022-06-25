@@ -44,10 +44,4 @@
     object-fit: cover;
     width: clamp(rem(220), 25vw , rem(290));
     }
-    &__btn{
-        align-self: flex-end;
-        transform: translate(-100%,-25%);
-        @include  show-more-btn;
-
-    }
 }

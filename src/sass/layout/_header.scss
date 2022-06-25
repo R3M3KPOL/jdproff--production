@@ -52,15 +52,7 @@
         }
     }
     &__title{
-    white-space: nowrap;
-    cursor: pointer;
-    &>a{
-        color: $color-black;
-    }
-
-     @include breakpoint-max(md){
-           display: none;
-        }
+        @include logo-title(header);
     }
      &__logo{
         display: flex;

@@ -1,3 +1,60 @@
+@use '../utils' as *;
+@use '../abstracts' as *;
+
+
 .footer{
-    background-color: skyblue;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375.5px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+    background-color:$color-black;
+    &__title{
+        @include logo-title(footer);
+    }
+    &__container-a,&__container-b{
+        padding: rem(16);
+        @include breakpoint-min(lg){
+        padding: rem(32);
+        }
+    }
+    &__container-a{
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__container-b{
+        display: flex;
+        gap:rem(22);
+        order: -1;
+        @include breakpoint-min(md){
+        order: 0;
+        }
+        @include breakpoint-min(lg){
+        gap:rem(48);
+        }
+    }
+    &__createdby{
+        color:$color-white;
+        padding: rem(16) 0;
+    }
+    &__sm{
+        @include socialMedia-container(paddingFooter);
+    }
+    &__sm-icon>a>svg{
+        @include socialMedia-svg(property-footer);
+    }
+    &__sm-icon{
+        @include socialMedia-iconHover(footer-property);
+    }
+
+    &__title-list{
+        color: $color-channel-marker-green;
+        margin-bottom: rem(16);
+    }
+    &__item{
+        color: $color-second-grey;
+    }
+    &__list-item>a:hover{
+        border-bottom: 1px solid $color-white;
+    }
 }

@@ -32,49 +32,15 @@
         padding: rem(16) 0;
     }
      &__sm{
-        display: inline-flex;
-        gap: rem(24);
-        align-items: center;
-        padding: rem(16) 0;
+        @include socialMedia-container(false);
     }
 
     &__icon>a>svg{
-    width:clamp(rem(22),2vw,rem(28)) ;
-    min-height: rem(22);
-    max-height: rem(28);
-    padding: rem(4);
-    fill: $color-white;
-    border-radius: rem(10);
-    cursor: pointer; 
-    transition: fill .2s ease-in-out, box-shadow .2s ease-in-out, transform .3s ease-in-out, background-color .2s ease-in-out;
-}
-&__icon{
-    &--fb{
-        &:hover{
-        fill:$sm-facebook;
-        box-shadow: 0px 5px 10px rgb(0, 71, 89);
-        transform: scale(1.1);
-        background-color:#c6defd7c;
-        }
+        @include socialMedia-svg(property-header);
     }
-    &--instagram{
-        &:hover {
-            fill: $sm-instagram;
-            box-shadow: 0px 5px 10px rgb(0 71 89);
-            transform: scale(1.1);
-            background-color:#fca6b67e;
+    &__icon{
+        @include socialMedia-iconHover(false);
         }
-
-    }
-    &--email{
-        &:hover {
-            fill:$sm-email;
-            box-shadow: 0px 5px 10px rgb(0 71 89);
-            transform: scale(1.1);
-            background-color:rgba(194, 192, 192, 0.493);
-        }
+    
     }
 
-}
-   
-}

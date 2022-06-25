@@ -160,4 +160,45 @@
     } 
 }
 
+//buttons for slider-carousel show more. 
+.slider-gallery__btn{
+        align-self: flex-end;
+        transform: translate(-100%,-25%);
+        @include btns(showMore);
+}
 
+//buttons for reviews section.
+
+ .reviews{
+    &__button{
+        border: none;
+        transform: translate(-50%,-25%);
+        background-color: transparent;
+        @include  btns(false);
+    }
+    &__author>a{
+        transform: translate(0,0);
+        @include btns(readMore);
+    }
+
+}
+
+//button for contact - send message.
+.contact__form-btn{
+    text-transform: uppercase;
+    padding: rem(8) rem(32);
+    border: rem(2) solid $bgc-white;
+    border-radius: rem(10);
+    color: $bgc-white;
+    background-color: #004759;
+    cursor: pointer;
+    transition: background-color .3s ease-out,
+        border .3s ease-in-out,
+        color .2s ease-out;
+
+    &:hover {
+        background-color: $color-white;
+        border: rem(2) solid $bgc-dark;
+        color: $bgc-dark;
+    }
+}

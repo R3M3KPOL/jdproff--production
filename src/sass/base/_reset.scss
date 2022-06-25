@@ -12,8 +12,7 @@
 
 .grid-container{
     display: grid;
-	place-items: center;
-    justify-items: stretch;
+	place-items: center stretch;
     margin: 0 auto;
     max-width: em(2560);
 }

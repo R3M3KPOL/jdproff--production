@@ -2,35 +2,73 @@
 @use '../abstracts/media' as *;
 @use '../utils/' as *;
 
-//this mixin ''show-more-btn'' is style for few buttons.
+@mixin logo-title($title){
+    display:block;
+    white-space: nowrap;
+    cursor: pointer;
+     &>a{
+        color: $color-channel-marker-green;
+        }
+    @if($title == 'header'){
+        &>a{
+        color: $color-black;
+        }
+        @include breakpoint-max(md){
+            display: none;
+        }
+    }
+}
+
+
+//this mixin ''btns'' is style for few buttons.
 //another buttons style his in the _buttons.scss
-@mixin show-more-btn {
-    color: $color-black;
-    font-size: clamp(0.655rem, 0.8vw, 0.9rem);
+@mixin btns ($name){
+    color: $color-crab-nebula;
     padding: rem(8);
     transition: color .3s ease-in-out;
-    &::after,&::before{
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        border: 1px solid $bgc-aquamarine;
-    }
-    &:hover {
-        color: $bgc-aquamarine;
-    }
-    &::before,&::after{
-        transition: transform .3s ease-in-out;
-    }
-    &:hover::before{
-        transform: translate(-3%,-10%);
-    }
-    &:hover::after{
-    transform: translate(3%, 10%);
+        &::after,&::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border: 1px solid $bgc-aquamarine;
+        }
+        &:hover {
+            color: $bgc-aquamarine;
+        }
+        &::before,&::after{
+            transition: transform .3s ease-in-out;
+        }
+        &:hover::before{
+            transform: translate(-8%,-8%);
+        }
+        &:hover::after{
+        transform: translate(8%, 8%);
+        }
+    @if($name == showMore){
+        font-size: clamp(0.75rem, 0.8vw, 1rem);
+            &:hover::before{
+                transform: translate(-3%,-10%);
+            }
+            &:hover::after{
+                transform: translate(3%, 10%);
+            }
+
+        }
+        @else if($name == readMore){
+        font-size: clamp(0.75rem, 1.3vw, 1rem);
+            &:hover::before{
+                transform: translate(-3%,-8%);
+            }
+            &:hover::after{
+                transform: translate(3%, 8%);
+            }
+        }
 }
-}
+//ending style for button show-more-btn
+
 
 .title-heading{
     position: relative;
@@ -38,6 +76,7 @@
     width: fit-content;
     margin: rem(16) auto;
     padding: rem(16);
+    z-index: 1;
     &::before{
         content: attr(data-text);
         position: absolute;
@@ -176,4 +215,90 @@ transform: translate3d(-300px, 0px, 0px);
     @else{
         @include baseForPseudoElements(false,false);
     }
+}
+
+
+@mixin ContactStyleForm {
+
+    padding: rem(8);
+    background-color: $color-white;
+    border-radius: rem(13);
+    border: none;
+    box-shadow: inset 2px 2px 4px $color-second-grey
+, inset -2px -2px 4px $color-white;
+
+}
+
+//mixins for social media icon,svg - video section, footer.
+
+@mixin socialMedia-container($padding){
+    display: inline-flex;
+    gap: rem(24);
+    align-items: center;
+    padding: rem(16) 0;
+    @if($padding == 'paddingFooter'){
+        padding: 0;
+    }
+}
+@mixin socialMedia-svg($property){
+    min-height: rem(22);
+    padding: rem(4);
+    fill: $color-white;
+    border-radius: rem(10);
+    cursor: pointer; 
+    transition: fill .2s ease-in-out, box-shadow .2s ease-in-out, transform .3s ease-in-out, background-color .2s ease-in-out;
+    @if($property == 'property-header' ){
+        max-height: rem(28);
+         width:clamp(em(22),2vw,em(28));
+    }
+    @if($property == 'property-footer'){
+        max-height: rem(26);
+        width:clamp(em(24),2vw,em(26));
+    }
+}
+@mixin socialMedia-iconHover($for-footer){
+    &--fb{
+        &:hover{
+        fill:$sm-facebook;
+        box-shadow: $box-shadow-property;
+        transform: $scale-property;
+        background-color:$sm-facebook-bg;
+        }
+    }
+    &--instagram{
+        &:hover {
+            fill: $sm-instagram;
+            box-shadow: $box-shadow-property;
+            transform: $scale-property;
+            background-color:$sm-instagram-bg;
+        }
+
+    }
+    &--email{
+        &:hover {
+            fill:$sm-email;
+            box-shadow: $box-shadow-property;
+            transform: $scale-property;
+            background-color:$sm-email-bg;
+        }
+    }
+    @if($for-footer == 'footer-property'){
+     &--fb{
+        &:hover{
+        box-shadow: $box-shadow-property-footer;
+        }
+    }
+    &--instagram{
+        &:hover {
+            box-shadow: $box-shadow-property-footer;
+        }
+
+    }
+    &--email{
+        &:hover {
+            box-shadow: $box-shadow-property-footer;
+        }
+    }
+    }
+
 }
