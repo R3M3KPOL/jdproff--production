@@ -11,7 +11,7 @@
         }
     @if($title == 'header'){
         &>a{
-        color: $color-black;
+        color: $bgc-dark;
         }
         @include breakpoint-max(md){
             display: none;
