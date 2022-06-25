@@ -9,6 +9,7 @@ const dropDown = document.querySelector('.header__item--arrow');
 const closeUlList = document.querySelector('.header__dropdown--closed');
 const btnsSlider = document.querySelectorAll('[data-carousel-button]');
 const slides = document.querySelector("[data-slides]");
+const footerYear = document.querySelector('.box-author__copy')
 let mediaQuery = window.matchMedia('(min-width: 768px)');
 let size = 100;
 
@@ -147,7 +148,11 @@ for(let i=0; i<elementsDisplayed; i++) {
 }
 
 
-
+const handleCurrentYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year ;
+}
+handleCurrentYear();
 
 
 
