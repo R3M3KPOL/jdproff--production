@@ -1,0 +1,64 @@
+@use 'font-face'as *;
+@use '../utils/functions'as *;
+@use '../abstracts/variables' as *;
+
+*  {
+    font-family: $font-family-poppins;
+}
+
+h2{
+  font-size: clamp(rem(24), 3vw, rem(30));
+  font-weight: $poppins-500;
+}
+h3{ 
+    font-size: clamp(rem(18), 2.4vw, rem(24));
+    font-weight: $poppins-500;
+}
+h4{ 
+    font-size: clamp(rem(14), 2.4vw, rem(16));
+    font-weight: $poppins-500;
+}
+p,
+li,
+span,
+label,
+input,
+cite {
+font-weight: $poppins-200;
+}
+
+p{
+font-size: clamp(rem(16.5), 2vw, rem(20)); 
+}
+
+p{
+padding: rem(16);
+text-align: center;
+}
+
+a{  
+    font-size: clamp(rem(13), 1.5vw, rem(16));
+    font-weight: $poppins-500;
+    text-transform: uppercase;
+}
+
+.header__title>a{
+    font-weight: $poppins-700;
+    font-size: clamp(rem(18), 3.5vw, rem(38));
+}
+
+.fa-arrow-down{
+    font-size: rem(15);
+}
+
+.footer__title>a{
+    font-size: inherit;
+}
+.footer__createdby{
+    font-size: clamp(rem(12), 2.3vw, rem(14));
+    font-weight: $poppins-400;
+    text-align: start;
+}
+.footer__list-item>a{
+    font-size: clamp(rem(10), 2.3vw, rem(12));
+}

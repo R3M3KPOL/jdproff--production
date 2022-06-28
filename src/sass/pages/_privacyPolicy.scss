@@ -1,0 +1,58 @@
+@use '../utils' as *;
+@use '../base/reset';
+@use '../base/font-face';
+@use '../base/base-dir';
+@use '../abstracts/media' as *;
+@use '../abstracts/variables' as *;
+@use '../components/buttons' as *;
+@use '../layout/header';
+@use '../layout/footer';
+
+.title-heading::before{
+    top:rem(4);
+}
+.privacyPolicy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: em(1000);
+    padding: rem(32);
+    margin: rem(100) auto;
+}
+
+.privacyPolicy {
+    &__title {
+        font-size: clamp(rem(22), 2.4vw, rem(28));
+        text-transform: uppercase;
+        border-bottom: rem(2) solid #009581;
+        padding: rem(8) 0;
+    }
+
+}
+
+.contentPolicy {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: rem(48);
+  &__text,
+    &__item,&__title,
+    &__subtitle {
+        padding: rem(8) 0;
+    }
+    &__title,
+    &__subtitle {
+        margin: rem(16) 0;
+        border-bottom: rem(2) solid #009581;
+        font-weight: $poppins-700;
+    }
+    &__title{
+        font-size: clamp(rem(18), 2.4vw, rem(24));
+    }
+     &__subtitle{
+        font-size: clamp(rem(16), 2.4vw, rem(22));
+     }
+     &__text,&__item{
+        font-size: clamp(rem(14), 2vw, rem(18));
+     }
+}

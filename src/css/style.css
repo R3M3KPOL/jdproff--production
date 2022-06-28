@@ -38,17 +38,7 @@
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-a,
-li,
-span,
-label,
-input,
-cite {
+* {
   font-family: "Poppins", sans-serif;
 }
 
@@ -58,7 +48,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.1875rem, 2.4vw, 1.5rem);
+  font-size: clamp(1.125rem, 2.4vw, 1.5rem);
   font-weight: 500;
 }
 
@@ -76,7 +66,7 @@ cite {
   font-weight: 200;
 }
 
-p, .services__list {
+p {
   font-size: clamp(1.03125rem, 2vw, 1.25rem);
 }
 
@@ -98,6 +88,24 @@ a {
 
 .fa-arrow-down {
   font-size: 0.9375rem;
+}
+
+.footer__title > a {
+  font-size: inherit;
+}
+
+.footer__createdby {
+  font-size: clamp(0.75rem, 2.3vw, 0.875rem);
+  font-weight: 400;
+  text-align: start;
+}
+
+.footer__list-item > a {
+  font-size: clamp(0.625rem, 2.3vw, 0.75rem);
+}
+
+.services__list {
+  font-size: clamp(1.03125rem, 2vw, 1.25rem);
 }
 
 .video-section__tittle {
@@ -135,20 +143,6 @@ a {
 .contact__form-label, .contact__form-btn {
   font-size: clamp(0.8125rem, 1.8vw, 1rem);
   font-weight: 400;
-}
-
-.footer__title > a {
-  font-size: inherit;
-}
-
-.footer__createdby {
-  font-size: clamp(0.75rem, 2.3vw, 0.875rem);
-  font-weight: 400;
-  text-align: start;
-}
-
-.footer__list-item > a {
-  font-size: clamp(0.625rem, 2.3vw, 0.75rem);
 }
 
 .title-heading {
