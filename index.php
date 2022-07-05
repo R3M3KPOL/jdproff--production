@@ -81,22 +81,22 @@ podejmujemy się długoterminowych prac wyjazdowych.">
             <section class="slider-gallery">
                 <div class="slider-gallery--overflow-center">
                     <figure class="slider-gallery__container">
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/malowanie domu przed-small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/malowanie domu po-small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio czerwone przed - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio czerwone po - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio przed(2) - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio po (2) - small.jpg" alt="">
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/malowanie domu przed-small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/malowanie domu po-small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio czerwone przed - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio czerwone po - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio przed(2) - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio po (2) - small.jpg" alt="">
                         </figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio przed - small.jpg" alt="">
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio przed - small.jpg" alt="">
                         </figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio po - przód - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)//patio po - bok - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/pomieszczenie przed - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/pomieszczenie w trakcie - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/pomieszczenie po - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/tarasik przed - small.jpg" alt=""></figure>
-                        <figure class="slider-gallery__figure"><img data-name="" class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/tarasik po - small.jpg" alt="">
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/patio po - przód - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)//patio po - bok - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/pomieszczenie przed - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/pomieszczenie w trakcie - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/pomieszczenie po - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/tarasik przed - small.jpg" alt=""></figure>
+                        <figure class="slider-gallery__figure"><img data-name=""  class="slider-gallery__photo" src="./src/img/photo/slider gallery - all photos(300width)/tarasik po - small.jpg" alt="">
                         </figure>
                     </figure>
                     <a class="slider-gallery__btn" href="">show more...</a>
@@ -117,13 +117,13 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                             godt koordinert team som er klar til å takle hver utfordring.</p>
                     </header>
                     <picture class="why-us__jpg why-us__jpg--first" data-name="images-right">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-patio-przed-small.webp">
-                        <img src="./src/img/photo/inne/biały-domek-patio-przed.jpg" alt="en plan av en leilighet som ligger på et trebord" class="whyUs__item-img">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-patio-przód-300.webp">
+                        <img src="./src/img/photo/biały-domek-patio/biały-domek-patio-przód-500.jpg" alt="en plan av en leilighet som ligger på et trebord" class="whyUs__item-img">
                     </picture>
 
                     <picture class="why-us__jpg why-us__jpg--second" data-name="images">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-patio-po-small.webp">
-                        <img src="./src/img/photo/inne/biały-domek-patio-po.jpg" alt="en plan av en leilighet som ligger på et trebord" class="whyUs__item-img">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-patio-w-trakcie-300.webp">
+                        <img data-src="./src/img/photo/biały-domek-patio/biały-domek-patio-w-trakcie-500.jpg" alt="en plan av en leilighet som ligger på et trebord" class="whyUs__item-img">
                     </picture>
                 </section>
                 <section class="why-us__container">
@@ -136,12 +136,12 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                             vår kunnskaper og ferdigheter.</p>
                     </header>
                     <picture class="why-us__jpg why-us__jpg--third" data-name="images">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/taras-przed-small.webp">
-                        <img src="./src/img/photo/inne/taras-przed.jpg" alt="" class="why-us__item-img">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/taras-przed-300.webp">
+                        <img loading="lazy" data-src="./src/img/photo/tarasy/taras-w-trakcie-500.jpg" alt="" class="why-us__item-img">
                     </picture>
                     <picture class="why-us__jpg why-us__jpg--fourth" data-name="images-left">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-patio-po-small.webp">
-                        <img src="./src/img/photo/inne/taras-po.jpg" alt="" class="why-us__item-img">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/taras-po-300.webp">
+                        <img src="./src/img/photo/tarasy/taras-po-500.jpg" alt="" class="why-us__item-img">
                     </picture>
 
                 </section>
@@ -154,12 +154,12 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                             vi utvide vår kunnskap innen renovering og bygging.</p>
                     </header>
                     <picture class="why-us__jpg why-us__jpg--fifth" data-name="images-bottom">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/łazienka-przed-small.webp">
-                        <img src="./src/img/photo/inne/łazienka-przed.jpg" alt="">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/łazienka-przed-300.webp">
+                        <img loading="lazy" src="./src/img/photo/remont-łazienki-2/remont-dużej-łazienki-500.jpg" alt="">
                     </picture>
                     <picture class="why-us__jpg why-us__jpg--sixth" data-name="images">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/łazienka-po-small.webp">
-                        <img src="./src/img/photo/inne/łazienka-po.jpg" alt="" class="why-us__item-img">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/łazienka-po-300.webp">
+                        <img loading="lazy" data-src="./src/img/photo/remont-łazienki-2/po-remoncie-dużej-łazienki-500.jpg" alt="" class="why-us__item-img">
                     </picture>
                 </section>
                 <section class="why-us__container">
@@ -169,16 +169,16 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                             kundetilfredshet garanti med arbeidet vi har fått.</p>
                     </header>
                     <picture class="why-us__jpg why-us__jpg--seventh" data-name="images-right">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-z-bliska-(2)-small.webp">
-                        <img src="./src/img/photo/inne/biały-domek-przed-(2).jpg" alt="">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-z-bliska-(2)-300.webp">
+                        <img loading="lazy" src="./src/img/photo/biały-domek-duże-patio/biały-domek-przed-500.jpg" alt="">
                     </picture>
                     <picture class="why-us__jpg why-us__jpg--eighth" data-name="images">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-po(2)-z-bliska-small.webp">
-                        <img src="./src/img/photo/inne/biały-domek-po-z-bliska-(2).jpg" alt="">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-po(2)-z-bliska-300.webp">
+                        <img loading="lazy" data-src="./src/img/photo/biały-domek-duże-patio/biały-domek-po-z-bliska-500.jpg" alt="">
                     </picture>
                     <picture class="why-us__jpg why-us__jpg--ninth" data-name="images-left">
-                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-po-(2)-small.webp">
-                        <img src="./src/img/photo/inne/biały-domek-po-(2).jpg" alt="">
+                        <source media="(max-width: 767px)" srcset="./src/img/photo/inne/img-300-small/biały-domek-po-(2)-300.webp">
+                        <img loading="lazy" src="./src/img/photo/biały-domek-duże-patio/biały-domek-po-500.jpg" alt="">
                     </picture>
                 </section>
             </section>
@@ -500,6 +500,7 @@ podejmujemy się długoterminowych prac wyjazdowych.">
         </footer>
     </div>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/parallax.js"></script>
 </body>
 
 </html>

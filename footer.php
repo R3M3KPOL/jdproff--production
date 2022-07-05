@@ -31,8 +31,8 @@
         <div class="footer__box-list">
             <h4 class="footer__title-list">Information</h4>
             <ul class="footer__list">
-                <li class="footer__list-item"><a href="#bottom" class="footer__item">Prosjekter</a></li>
-                <li class="footer__list-item"><a href="#bottom" class="footer__item">Cennik</a></li>
+                <li class="footer__list-item"><a href="gallery.php"footer__item">Prosjekter</a></li>
+                <li class="footer__list-item"><a href="price.php" class="footer__item">Cennik</a></li>
             </ul>
         </div>
         <div class="footer__box-list">

@@ -1,6 +1,4 @@
 @use '../utils' as *;
-@use '../base/reset';
-@use '../base/font-face';
 @use '../base/base-dir';
 @use '../abstracts/media' as *;
 @use '../abstracts/variables' as *;
@@ -42,7 +40,8 @@
     }
     &__title,
     &__subtitle {
-        margin: rem(16) 0;
+        width: fit-content;
+        margin: rem(16) auto;
         border-bottom: rem(2) solid #009581;
         font-weight: $poppins-700;
     }

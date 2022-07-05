@@ -20,7 +20,7 @@
             <li class="header__list"><a href="#top" class="header__item">Om oss</a></li>
             <li class="header__list"><a href="#middle" class="header__item">Tjenester</a>
             </li>
-            <li class="header__list header__list--dropdown"><a href="#bottom" class="header__item header__item--arrow">Prosjekter
+            <li class="header__list header__list--dropdown"><a href="#" class="header__item header__item--arrow">Prosjekter
                     <span class="header__arrow"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span>
                 </a>
                 <ul class="header__dropdown">
@@ -35,7 +35,7 @@
                     </li>
                     <li class="header__dp_item"><a href="#" class="header__item">Malowanie
                             domów</a></li>
-                    <li class="header__dp_item"><a href="#" class="header__item">Inne
+                    <li class="header__dp_item"><a href="gallery.php" class="header__item">Inne
                             prace</a></li>
                 </ul>
             </li>

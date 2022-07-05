@@ -1,0 +1,92 @@
+@use '../utils' as *;
+@use '../base/base-dir';
+@use '../abstracts' as *;
+@use '../components/buttons' as *;
+@use '../layout/header';
+@use '../layout/footer';
+
+.title-heading{margin: 0;
+    padding: 0 rem(16);}
+.title-heading::before{
+    top: rem(-4);
+}
+[data-name='images']{
+    transition: opacity .2s ease-in-out;
+    opacity: 0;
+}
+@include fades(true,false);
+
+.gallery{
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+        grid-template-rows: repeat(auto-fit,minmax(200px,1fr));
+        margin: rem(250) 0;
+    }
+    &__description{
+        margin:0 rem(8);
+        padding: rem(22);
+    }
+    &__subtitle>a{
+        font-size: inherit;
+        font-weight: $poppins-400;
+        font-style: italic;
+        padding: 0 rem(16);
+        transition: color .2s ease-in-out;
+        &:hover{
+            color: $color-sea-glass;
+        }
+    }
+    &__text{
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        text-align: start;
+    }
+    &__masonry{
+        grid-area: 3;
+        column-count: 1;
+        padding: rem(16);
+        @include breakpoint-min(sm){
+            column-count: 2;
+        }
+        @include breakpoint-min(lg){
+        grid-area: 1/2/1/4;
+        }
+        @include breakpoint-min(xl){
+            column-count: 3;
+        }
+       
+    }
+    &__photo{
+        position: relative;
+        padding: rem(8);
+    }
+    &__caption{
+        position: absolute;
+        bottom: rem(20);
+        left: rem(20);
+        padding: rem(4);
+        background-color: #25252552;
+        border-radius: rem(16);
+        transition: background-color .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+        cursor: pointer;
+        &:hover{
+          background-color: #252525be;  
+        }
+        &>a{color: $color-grey;
+            font-weight: $poppins-200;
+            font-size: clamp(0.7rem, 5vw, 0.8rem);
+        }
+    }
+    &__photo>picture>img{
+    // min-height: rem(150);
+    min-width: rem(150);
+    width: 100%;
+	border-radius: rem(16);
+    transition: $scale-transform;
+    cursor: pointer;
+      &:hover{
+            transform: $scale;
+        }
+    }
+}

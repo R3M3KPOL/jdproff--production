@@ -4,10 +4,13 @@
 
 .footer{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(375.5px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-    justify-items: center;
     background-color:$color-black;
+
+    @include breakpoint-min(md){
+        justify-items: center;
+    }
     &__title{
         @include logo-title(footer);
     }
@@ -24,10 +27,13 @@
     }
     &__container-b{
         display: flex;
+        flex-direction: column;
         gap:rem(22);
         order: -1;
+
         @include breakpoint-min(md){
         order: 0;
+        flex-direction: row;
         }
         @include breakpoint-min(lg){
         gap:rem(48);
@@ -49,7 +55,7 @@
 
     &__title-list{
         color: $color-channel-marker-green;
-        margin-bottom: rem(16);
+        margin-bottom: rem(8);
     }
     &__item{
         color: $color-second-grey;

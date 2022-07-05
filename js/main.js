@@ -65,6 +65,7 @@ const changeListener =(evt)=>{
 //sliders
 //slider-carousel-for-keyframes-css
 const AnimationSliderKeyFrames =()=> {
+    if (figureContent === null) return;
 const elementsDisplayed = getComputedStyle(root).getPropertyValue("--elements-displayed");
 root.style.setProperty("--all-elements", figureContent.children.length);
     for(let i=0; i<elementsDisplayed; i++) {
