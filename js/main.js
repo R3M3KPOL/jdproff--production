@@ -1,66 +1,16 @@
+import {filterItems,options,loadingImages,observer} from './parallax.js'
+import { showMenu,dropDownMenu,closedUlList,removeClass,changeListener } from './navigation-menu.js';
 const root = document.documentElement;
-
-//variables for menu
-const menuLines = document.querySelectorAll('.btn__line');
-const menuBtn = document.querySelector('.btn__hamburger');
-const menuList = document.querySelector('.header__items');
-const dropDown = document.querySelector('.header__item--arrow');
-const ulList = document.querySelector('.header__dropdown');
-const closeUlList = document.querySelector('.header__dropdown--closed');
-const blurBg = document.querySelector('.header__blurBg');
 //variables for sliders
 const figureContent = document.querySelector('.slider-gallery__container');
 const btnsSlider = document.querySelectorAll('[data-carousel-button]');
 const slides = document.querySelector("[data-slides]");
 //variables for footer - change years
 const footerYear = document.querySelector('.box-author__copy')
-//another variables
-let mediaQuery = window.matchMedia('(min-width: 768px)');
 let size = 100;
+let newIndex
 
 
-//open menu -mobile
-const showMenu =()=> {
-    menuLines.forEach((element) => {
-        element.classList.toggle('opened');
-        if(element.classList.contains('opened')){
-            menuList.classList.add('open');
-        }
-        else if(!element.classList.contains('opened')){
-            menuList.classList.remove('open');
-            closedUlList()
-
-        } 
-    })
-}
-//dropdown menu 
-const dropDownMenu =()=> {
-    ulList.classList.add('--Mobile');
-    if(ulList.classList.contains('--Mobile')){
-        blurBg.classList.add('--open')
-    }
-}
-
-const closedUlList =()=>{
-    ulList.classList.remove('--Mobile')
-    blurBg.classList.remove('--open')
-};
-
-const removeClass =(e)=> {
-    if(e.target === blurBg){
-        closedUlList()
-    }
-}
-
-const changeListener =(evt)=>{
-    if(!evt.matches){
-    dropDown.addEventListener("click", dropDownMenu)
-    }
-    else{
-    dropDown.removeEventListener("click",dropDownMenu)
-    closedUlList()
-}
-};
 
 //sliders
 //slider-carousel-for-keyframes-css
@@ -92,11 +42,11 @@ root.style.setProperty("--all-elements", figureContent.children.length);
 
 //slider for reviews section
 const slider =(button)=>{
-    const newOffset = button.dataset.carouselButton === "next" ? 1 : -1;
+    let newOffset = button.dataset.carouselButton === "next" ? 1 : -1;
     
     button.addEventListener("click", () => {
         const activeSlide = slides.querySelector('[data-name="active"]'); 
-        offset = newOffset;
+        let offset = newOffset;
         newIndex = [...slides.children].indexOf(activeSlide) + offset
         ifProperty()
         transformX()
@@ -106,7 +56,7 @@ const slider =(button)=>{
 
     button.addEventListener("keydown",(elements) =>{
         const activeSlide = slides.querySelector('[data-name="active"]'); 
-        offset = newOffset;
+        let offset = newOffset;
     
         newIndex = [...slides.children].indexOf(activeSlide) + offset
         if(elements.code === 'ArrowRight' || elements.keyCode === 39 ){
@@ -134,12 +84,5 @@ const handleCurrentYear = () => {
 
 AnimationSliderKeyFrames()
 handleCurrentYear();
-changeListener(mediaQuery)
 btnsSlider.forEach(slider)
-menuBtn.addEventListener("click", showMenu);
-blurBg.addEventListener("click", removeClass)
-mediaQuery.addEventListener("change", changeListener);
-closeUlList.addEventListener("click", closedUlList);
 
-  //export menu(variables and function) for another file.js
-export{menuLines,menuBtn,menuList,dropDown,ulList,closeUlList,blurBg,showMenu,dropDownMenu,removeClass,changeListener}

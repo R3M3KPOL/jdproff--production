@@ -11,8 +11,7 @@
     <link rel="short icon" type="image/png" href="img/photo/favicon/favicon-16x16.png"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/price.css">
     <title>JD PROFF-price</title>
     <meta name="description" content="oferujemy usługi z zakresu prac budowlanych .Zajmujemy się wykonywaniem prac na terenie Oslo i okolic.
@@ -25,7 +24,7 @@ podejmujemy się długoterminowych prac wyjazdowych.">
             <?php include 'menu.php'; ?>
         </header>
         <main class="price">
-            <article class="price__container">
+            <article id="price" class="price__container">
                 <h1 class="price__title title-heading">Cennik firmy jd proff</h1>
                 <section class="price__section price__section--a">
                     <h2 class="price__subtitle title-heading">Szanowni Państwo</h2>
@@ -54,8 +53,8 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                 <section class="price__section price__section--b">
                     <img class="price__img" src="./src/img/photo/svg icon/jdproff_logo-about-svg.svg" alt="">
                     <div class="price__buttons">
-                        <a class="price__btn" href="">Galeria zdjęć</a>
-                        <a class="price__btn" href="">Kontakt</a>
+                        <a class="price__btn" href="gallery.php">Galeria zdjęć</a>
+                        <a class="price__btn" href="index.php">Kontakt</a>
                     </div>
                 </section>
             </article>

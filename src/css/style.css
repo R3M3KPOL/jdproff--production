@@ -1150,8 +1150,8 @@ a {
             transform: translate3d(0, 0, 0);
   }
   .why-us__jpg--fourth {
-    -webkit-transform: translate3d(300px, 0px, 0px);
-            transform: translate3d(300px, 0px, 0px);
+    -webkit-transform: translate3d(200px, 0px, 0px);
+            transform: translate3d(200px, 0px, 0px);
   }
   .why-us__jpg--fifth {
     -webkit-transform: translate3d(0, -100%, 0);

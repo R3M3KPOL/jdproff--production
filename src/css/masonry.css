@@ -982,6 +982,10 @@ a {
   top: -0.25rem;
 }
 
+a {
+  text-transform: capitalize;
+}
+
 [data-name=images] {
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
@@ -1022,7 +1026,7 @@ a {
 
 .gallery__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   margin: 15.625rem 0;
 }
@@ -1064,37 +1068,61 @@ a {
     grid-area: 1/2/1/4;
   }
 }
-@media (min-width: 75em) {
-  .gallery__masonry {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-  }
-}
 .gallery__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   padding: 0.5rem;
+  margin: 0 auto;
 }
 .gallery__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
-  bottom: 1.25rem;
-  left: 1.25rem;
+  bottom: 3.25rem;
   padding: 0.25rem;
   background-color: rgba(37, 37, 37, 0.3215686275);
+  color: #dbdbdb;
   border-radius: 1rem;
   -webkit-transition: background-color 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: background-color 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   cursor: pointer;
+  z-index: 5;
 }
 .gallery__caption:hover {
   background-color: rgba(37, 37, 37, 0.7450980392);
+  color: #f5f5f5;
 }
 .gallery__caption > a {
+  font-size: 0.75rem;
   color: #dbdbdb;
-  font-weight: 200;
-  font-size: clamp(0.7rem, 5vw, 0.8rem);
+  font-weight: 300;
+}
+.gallery__caption--project {
+  bottom: 1.25rem;
+}
+@media (min-width: 48em) {
+  .gallery__caption {
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+  .gallery__caption--project {
+    left: 9.375rem;
+  }
 }
 .gallery__photo > picture > img {
+  min-height: 9.375rem;
   min-width: 9.375rem;
   width: 100%;
   border-radius: 1rem;
@@ -1107,4 +1135,22 @@ a {
 .gallery__photo > picture > img:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+.gallery__photo--last {
+  display: none;
+}
+.gallery__input {
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}
+
+.active404 {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=masonry.css.map */

@@ -23,9 +23,9 @@
         <div class="footer__box-list">
             <h4 class="footer__title-list">Company</h4>
             <ul class="footer__list">
-                <li class="footer__list-item"><a href="#top" class="footer__item">Om oss</a></li>
+                <li class="footer__list-item"><a href="index.php #top" class="footer__item">Om oss</a></li>
                 <li class="footer__list-item"><a href="#middle" class="footer__item">Tjenester</a></li>
-                <li class="footer__list-item"><a href="#contact" class="footer__item">Kontakt</a></li>
+                <li class="footer__list-item"><a href="index.php #contact" class="footer__item">Kontakt</a></li>
             </ul>
         </div>
         <div class="footer__box-list">
