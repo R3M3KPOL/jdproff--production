@@ -54,7 +54,7 @@ podejmujemy się długoterminowych prac wyjazdowych.">
                     <img class="price__img" src="./src/img/photo/svg icon/jdproff_logo-about-svg.svg" alt="">
                     <div class="price__buttons">
                         <a class="price__btn" href="gallery.php">Galeria zdjęć</a>
-                        <a class="price__btn" href="index.php">Kontakt</a>
+                        <a class="price__btn" href="index.php#contact">Kontakt</a>
                     </div>
                 </section>
             </article>
@@ -63,7 +63,7 @@ podejmujemy się długoterminowych prac wyjazdowych.">
             <?php include 'footer.php'; ?>
         </footer>
     </div>
-    <script type="module" src="./js/navigation-menu.js"></script>
+    
 </body>
 
 </html>

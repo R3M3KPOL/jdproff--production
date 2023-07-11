@@ -29,7 +29,7 @@ font-weight: $poppins-200;
 }
 
 p,a,li{
-font-size: clamp(rem(16.5), 2vw, rem(20)); 
+font-size: clamp(rem(16), 2.3vw, rem(20)); 
 }
 
 p{
@@ -43,8 +43,6 @@ a{
 }
 .header__item{
     font-size: clamp(rem(13), 1.5vw, rem(16));
-    font-weight: $poppins-500;
-    text-transform: uppercase;
 }
 .header__title>a{
     font-weight: $poppins-700;

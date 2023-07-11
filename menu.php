@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 
+
 <body>
     <nav class="header__navigation">
-        <div class="header__logo">
-            <img class="header__img" src="./src/img/photo/svg icon/JdProff-logo.svg" alt="logo jdproff">
+        <div class="header__logo"><a href="index.php"><img class="header__img" src="./src/img/photo/svg icon/JdProff-logo.svg" alt="logo jdproff"></a>
             <span class="header__title"><a href="index.php">JD PROFF</a></span>
         </div>
 
@@ -16,28 +16,26 @@
             </svg>
         </button>
         <ul class="header__items">
-            <li class="header__list"><a href="price.php" class="header__item">Cennik</a>
+            <li class="header__list"><a href="price.php" class="header__item">Priser</a>
             </li>
             <li class="header__list"><a href="index.php#top" class="header__item">Om oss</a></li>
             <li class="header__list"><a href="index.php#middle" class="header__item">Tjenester</a>
             </li>
-            <li class="header__list header__list--dropdown"><a href="#" class="header__item header__item--arrow">Prosjekter
+            <li class="header__list header__list--dropdown "><a href="#" class="header__item header__item--arrow">Prosjekter
                     <span class="header__arrow"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span>
                 </a>
                 <ul class="header__dropdown">
                     <span class="header__dropdown--closed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 512">
                             <path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
                         </svg></span>
-                    <li class="header__dp_item"><a href="gallery.php" data-name="navigation" data-project="bathroom" class="header__item">Łazienki</a>
+                    <li class="header__dp_item"><a href="gallery.php" data-name="navigation" data-project="bathroom" class="header__item">Bad</a>
                     </li>
-                    <li class="header__dp_item"><a href="gallery.php" data-name="navigation" data-project="patio" class="header__item">Tarasy</a>
+                    <li class="header__dp_item"><a href="gallery.php" data-name="navigation" data-project="patio" class="header__item">Terrasse</a>
                     </li>
-                    <li class="header__dp_item"><a href="gallery.php" data-name="navigation" data-project="renovation" class="header__item">Garaże & Pomieszczenia</a>
+                    <li class="header__dp_item"><a href="gallery.php" data-name="navigation" data-project="renovation" class="header__item">Garasje & Rom</a>
                     </li>
-                    <li class="header__dp_item"><a href="gallery.php" data-name="navigation" data-project="painting" class="header__item">Malowanie
-                            domów</a></li>
-                    <li class="header__dp_item"><a href="gallery.php"  class="header__item">Inne
-                            prace</a></li>
+                    <li class="header__dp_item"><a href="gallery.php" data-name="navigation" data-project="painting" class="header__item">Takmaling utendørs lub Utendørsmaling</a></li>
+                    <li class="header__dp_item"><a href="gallery.php" class="header__item">Andre Tjenester</a></li>
                 </ul>
             </li>
             <li class="header__list"><a href="index.php#contact" class="header__item">Kontakt</a>
@@ -45,6 +43,7 @@
             <div class="header__blurBg"></div>
         </ul>
     </nav>
+
 </body>
 
 </html>

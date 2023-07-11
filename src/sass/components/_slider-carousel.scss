@@ -43,5 +43,6 @@
     &__photo{
     object-fit: cover;
     width: clamp(rem(220), 25vw , rem(290));
+    border-radius: rem(12);
     }
 }

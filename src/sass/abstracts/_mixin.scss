@@ -2,6 +2,7 @@
 @use '../abstracts/media' as *;
 @use '../utils/' as *;
 
+
 @mixin logo-title($title){
     display:block;
     white-space: nowrap;
@@ -21,6 +22,53 @@
 
 
 //this mixin ''btns'' is style for few buttons.
+
+//closed btns - for dropdown menu and sezon offert.
+@mixin closedBtn($name){
+    &--closed{
+            box-sizing: content-box;
+            transition: transform .2s ease-in-out;
+            svg{
+            transition: color .2s ease-in-out;
+            height: 100%;
+            width: 100%;
+            }
+            &:hover>svg{
+            color:$color-stroke-svg;
+            }
+        }
+    @if($name == closeDropDown){
+        &--closed{
+        align-self: flex-end;
+        width: rem(24);
+        padding: rem(8);
+            svg>path{
+                transform: translateX(15%);
+            }
+             &:hover{
+            transform: scale(1.2);
+            }
+        }
+
+    }
+    @if($name == 'closeSezonOffert'){
+         &--closed{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+            svg>path{
+                transform: translate3d(20%, 0, 0);
+            }
+             &:hover{
+            transform: scale(1.1);
+            }
+        }
+    }
+
+}
 //another buttons style his in the _buttons.scss
 @mixin btns ($name){
     color: $color-crab-nebula;
@@ -113,7 +161,7 @@
             transform: translate3d(0);
         }
        50%{
-           transform: translate3d(0,-80px,0);
+           transform: translate3d(0,-50px,0);
        }
 
     }
@@ -133,7 +181,7 @@
         }
         .fade-bottom{
             opacity: 1;
-            transform: translate3d(0,-25%,0);
+            transform: translate3d(0,-15%,0);
         }
     }
     @if else($timeline){
@@ -142,12 +190,11 @@
             opacity: 1;
             transform: scale(1) translate3d(0,0,0);
         }
-        
     }
 }
 
 @mixin transform3d-X-for-left{
-transform: translate3d(-300px, 0px, 0px);
+transform: translate3d(-100px, 0px, 0px);
 }
 
 @mixin transform3d-X($direction){
@@ -249,7 +296,7 @@ transform: translate3d(-300px, 0px, 0px);
     transition: fill .2s ease-in-out, box-shadow .2s ease-in-out, transform .3s ease-in-out, background-color .2s ease-in-out;
     @if($property == 'property-header' ){
         max-height: rem(28);
-         width:clamp(em(22),2vw,em(28));
+         width:clamp(em(22),7vw,em(28));
     }
     @if($property == 'property-footer'){
         max-height: rem(26);
@@ -301,4 +348,40 @@ transform: translate3d(-300px, 0px, 0px);
     }
     }
 
+}
+
+@mixin popup-layout {
+    .hidden{
+    display:none;
+}
+    .popup{
+    position: fixed;
+    inset: 0 0 0 0;
+    // pointer-events: none;
+    opacity: 1;
+    z-index: 999;
+    &__photo{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: $bgc-blackblue-transparent;
+    }
+    &__figures{
+        position: absolute;
+        max-height: 100%;
+        max-width: 85%;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0px);
+        border-radius: rem(10);
+    }
+    &__button{
+        position: absolute;
+        right: 0;
+        width: clamp(em(30),7vw,em(40));
+        aspect-ratio: 1/1;
+        transform: translate3d(rem(-25), rem(25), 0px);
+        cursor: pointer;
+    }
+}
 }

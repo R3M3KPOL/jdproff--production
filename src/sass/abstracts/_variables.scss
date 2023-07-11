@@ -1,6 +1,5 @@
 @use '../utils/functions' as *;
 @use '../abstracts/media' as *;
-
 :root{
 --width-container:clamp(75em, 100vw, 130em);;
 --elements-displayed:2;
@@ -35,6 +34,8 @@ $bgc-footer:#252525;
 $bgc-shadow:#00475966;
 $bgc-light-grey:#f3f3f3;
 $bgc-white:#ffff;
+$summer-offert:#e6fffb;
+$bgc-blackblue-transparent: #0047599c;
 //colors
 $color-white:#f5f5f5;
 $color-crab-nebula:#004759;
@@ -63,7 +64,16 @@ $sm-instagram-bg:#fca6b67e;
 $sm-email-bg:#c2c0c07e;
 $box-shadow-property: 0px 5px 10px $bgc-button;
 $box-shadow-property-footer: none;
+$box-shadow-summer-offert: 5px 5px 10px #12121226;
 $scale-property: scale(1.1);
+
+$width-heading:clamp(em(240),60vw,em(700));
+$transform-property:translate3d(0,-75%,0);
+
+$widthSummerOffert:clamp(em(200), 70vw,em(650));
+$width:em(35);
+$translate3dContainer:translate3d(-100%,0,0);
+$positionBtn:translate3d(rem(32),0,0);
 
 $linear-gradient-subMenu:linear-gradient(340deg, #09c6ac, #3dc3b0, #72d7c9, #acf3e9, #cbf5ef, #fbfbfb, #f8f8f8, #f8f9fa, #fafafb, #fcfcfd, #fdfdfe, #ffffff);
 

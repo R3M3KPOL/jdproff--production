@@ -4,6 +4,7 @@
 
 //section - video
 .video-section{
+    display: inherit;
     position: relative;
     color: $color-white;
     text-shadow: 0px 2px 10px rgb(0 71 89);
@@ -15,16 +16,11 @@
     }
     &__heading{
         position:absolute;
-        inset: 50% 0 0 0;
-        transform: translateY(-25%);
-        max-width: 60vw;
+        inset: 50% 0 0 10%;
+        transform:$transform-property;
+        width: $width-heading;
+        aspect-ratio: 2/1;
         line-height: 1.2;
-        @include breakpoint-min(md){
-        padding:$padding;
-        }
-        @include breakpoint-max(lg){
-        inset: 50% 0 0 5%;   
-        }
     }
 
  

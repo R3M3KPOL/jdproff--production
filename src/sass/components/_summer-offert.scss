@@ -1,0 +1,111 @@
+@use '../abstracts' as *;
+@use '../utils' as *;
+
+.summer-offert{
+    position: fixed;
+    top: rem(112);
+    width: $widthSummerOffert;
+    background-color: $summer-offert;
+    box-shadow: $box-shadow-summer-offert;
+    transition: transform 0.3s ease-in-out;
+    transform: $translate3dContainer;
+    z-index: 99;
+    &__container{
+    Overflow-y:scroll;
+    overflow-x: clip;
+    min-height: rem(400);
+    max-height: rem(570);
+    
+        &::-webkit-scrollbar{
+            width:10px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: $color-fake-jade;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: $color-pale-kings-blue;
+            border-radius: rem(5);
+            border: rem(1) solid $color-fake-jade;
+        }
+    }
+
+    &__title{
+        font-size: clamp(rem(20), 5vw, rem(24));
+    }
+    &__button{
+        box-sizing: content-box;
+        position: absolute;
+        right: 0;
+        top: rem(192);
+        width:$width;
+        aspect-ratio: 1/1;
+        padding: rem(5) rem(2.5);
+        border-radius: 0 20% 20% 0;
+        border:none;
+        box-shadow: 2px 2px 5px 0px $color-second-grey;
+        transform: $positionBtn;
+        cursor: pointer;
+        z-index: 150;
+         &:hover{
+            &::after{
+            content:'oferta sezonowa: wiosenno-letnia.';
+            display: inline-block;
+            position: absolute;
+            top: -100%;
+            left: 100%;
+            width: clamp(em(90),20vw,em(160));
+            aspect-ratio: 4/1;
+            background-color: $color-fake-jade;
+            border-radius: rem(10);
+            border: 1px solid $color-sea-glass;
+            }
+        }
+    }
+    &__svg{
+        display: block;
+        width: 100%;
+        height: 100%;
+        transform:rotate(45deg);
+        transition: $scale-transform;
+        animation: bell-animation 2s ease-in-out infinite;  
+        @keyframes bell-animation {
+             0%, 100%{
+            transform:rotate(45deg);
+            }
+            50%{
+                transform:rotate(-45deg);
+            }
+        }
+        &:hover{
+         animation: bell-animation 0.4s ease-in-out infinite;   
+        }
+    }
+    @include closedBtn(closeSezonOffert);
+    &__img{
+        max-width: 100%;
+        height: 100%;
+        padding:rem(16);
+    }
+}
+
+//animation - add,remove class
+.out{
+transition: transform 2s cubic-bezier(1,-0.21, 1, -0.5);
+transform: translate3d(-200%,0,0);
+}
+.inside{
+ transition:opacity .3s ease-in-out, transform 1s cubic-bezier(0, 1.55, 0, 1.2);
+transform: translate3d(rem(34),0,0);   
+}
+.invisible{
+    transition: all 2s ease-in-out;
+    display:none;
+}
+
+.visible-X{
+    display: block;
+}
+.go-to-right{
+    transition: transform 1s cubic-bezier(0.42, 0, 0.56, 1.15);
+    transform: translate3d(0%,0,0);
+}

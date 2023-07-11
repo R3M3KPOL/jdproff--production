@@ -9,13 +9,12 @@
     align-content: center;
     background-color: $color-crab-nebula;
     color: $color-white;
-
     &__wrapper {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: clamp(rem(280),55vw,rem(1000));
-        margin: rem(32);
+        width: clamp(rem(280),90vw,rem(1000));
+        margin: rem(20) 0;
         border-radius: rem(32);
         box-shadow: inset 0px 6px 4px $color-pale-kings-blue;
         background-color: $color-sea-glass;
@@ -62,13 +61,13 @@
     }
     
     &__form {
-        padding: rem(32);
+        padding: rem(16);
         height: 100%;
         border-radius: rem(32);
         background-color: $color-white;
         box-shadow: inset 2px 2px 4px #a9a9a9,inset 0px -5px 4px $color-second-grey;
         @include breakpoint-min(lg){
-    box-shadow: inset 2px 2px 4px #a9a9a9, inset -2px -2px 4px $color-second-grey;
+            box-shadow: inset 2px 2px 4px #a9a9a9, inset -2px -2px 4px $color-second-grey;
         }
     }
     

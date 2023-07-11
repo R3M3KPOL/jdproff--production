@@ -1,12 +1,12 @@
 @use '../utils/functions'as *;
 @use '../abstracts' as *;
 @use '../components' as *;
-
+@include popup-layout;
 
 .main{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(8,auto);
+    grid-template-rows: repeat(7,auto);
     gap: rem(75);
 
     @include breakpoint-min(lg){

@@ -1,5 +1,4 @@
 @use '../utils/functions' as * ;
-
 *,
 ::before,
 ::after {
@@ -9,10 +8,17 @@
     text-decoration: none;
     list-style: none;
 }
-
+html{
+    scroll-behavior: smooth;
+}
+.layout-position{
+    display: flex;
+    max-width: em(2560);
+    margin:0 auto;
+}
 .grid-container{
     display: grid;
-	place-items: center stretch;
-    margin: 0 auto;
     max-width: em(2560);
+    width: 100%;
+    margin: 0 auto;
 }

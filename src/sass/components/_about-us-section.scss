@@ -5,14 +5,12 @@
 .about-us{
     display: grid;
     justify-items: center;
-    grid-auto-columns: 1fr 1fr ;
-    grid-template-rows: 1fr;
     grid-template-areas:
-        "svg svg"
-        "text text";
+        "svg"
+        "text";
     padding:2rem 0;
     @include breakpoint-min(md){
-        grid-template-rows: 1fr 1fr;
+        grid-auto-columns: 1fr 0.5fr;
         grid-template-areas:
         "text svg"
         "text svg";
@@ -25,6 +23,6 @@
     &__image-svg{
         grid-area: svg;
         width: clamp(10em, 22vw, 20em);
-        animation: logo-JDPROFF 12s ease-in-out infinite;
+        animation: logo-JDPROFF 8s ease-in-out infinite;
     }
 }

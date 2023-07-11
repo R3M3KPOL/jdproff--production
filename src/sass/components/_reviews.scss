@@ -22,7 +22,7 @@
             }
         }
         &__container{
-        width: clamp(18.75em, 85vw, 55em);
+        width: clamp(17.80em, 85vw, 55em);
         margin: auto;
         overflow: hidden;
         }
@@ -37,7 +37,7 @@
         
         &__figure{
             background-color: $color-fake-jade;
-            border-radius: 10%;
+            border-radius: 2%;
             margin: rem(20);
             padding: rem(32);
 

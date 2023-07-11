@@ -20,7 +20,10 @@ a{
 }
 @include fades(true,false);
 
-
+.show{
+    opacity: 1;
+}
+@include popup-layout;
 .gallery{
 
     &__container{
@@ -29,15 +32,18 @@ a{
         grid-template-rows: repeat(auto-fit,minmax(200px,1fr));
         margin: rem(250) 0;
     }
+
     &__description{
-        margin:0 rem(8);
         padding: rem(22);
+        margin:0 rem(8);
     }
+
     &__subtitle>a{
         font-size: inherit;
         font-weight: $poppins-400;
         font-style: italic;
         padding: 0 rem(16);
+        color: $color-crab-nebula;
         transition: color .2s ease-in-out;
         &:hover{
             color: $color-sea-glass;
@@ -84,7 +90,7 @@ a{
           color: $color-white;
         }
         &>a{
-            font-size: rem(12);
+            font-size: rem(10);
             color: $color-grey;
             font-weight: $poppins-300;
         }
@@ -96,7 +102,7 @@ a{
             bottom: rem(20);
             left: rem(20);
         &--project{
-            left: rem(150);
+            left: rem(145);
         }
         }
     }
@@ -104,7 +110,8 @@ a{
     min-height: rem(150);
     min-width: rem(150);
     width: 100%;
-	border-radius: rem(16);
+	border-radius: rem(12);
+    box-shadow: -2px 6px 19px 0px #7f818e;
     transition: $scale-transform;
     cursor: pointer;
       &:hover{
@@ -123,12 +130,12 @@ a{
 
 //inputs for change gallery
 .active{
-        display:block;
+        display:flex;
     }
 
 .active404{
     display: block;
 }
-.hidden{
-    display:none;
+.invisible-content{
+    display: none;
 }

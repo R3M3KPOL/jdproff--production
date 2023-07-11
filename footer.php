@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
+
 <body>
     <div class="footer__container-a">
         <h3 class="footer__title"><a href="">JD PROFF</a></h3>
@@ -21,17 +22,17 @@
     </div>
     <div class="footer__container-b">
         <div class="footer__box-list">
-            <h4 class="footer__title-list">Company</h4>
+            <h4 class="footer__title-list">Om JD Proff</h4>
             <ul class="footer__list">
-                <li class="footer__list-item"><a href="index.php #top" class="footer__item">Om oss</a></li>
+                <li class="footer__list-item"><a href="index.php#top" class="footer__item">Om oss</a></li>
                 <li class="footer__list-item"><a href="#middle" class="footer__item">Tjenester</a></li>
-                <li class="footer__list-item"><a href="index.php #contact" class="footer__item">Kontakt</a></li>
+                <li class="footer__list-item"><a href="index.php#contact" class="footer__item">Kontakt</a></li>
             </ul>
         </div>
         <div class="footer__box-list">
-            <h4 class="footer__title-list">Information</h4>
+            <h4 class="footer__title-list">Informasjon</h4>
             <ul class="footer__list">
-                <li class="footer__list-item"><a href="gallery.php"footer__item">Prosjekter</a></li>
+                <li class="footer__list-item"><a href="gallery.php" class="footer__item">Prosjekter</a></li>
                 <li class="footer__list-item"><a href="price.php" class="footer__item">Cennik</a></li>
             </ul>
         </div>
